@@ -26,7 +26,7 @@ public class GemfireIndexController extends BaseWebController<GemfireIndex> {
         return service;
     }
 
-    @GetMapping({"/findTableIndex"})
+    @GetMapping("/findTableIndex")
     public Result findTableField(@RequestParam(required = true) int baseId, @RequestParam(required = true) String tableName) throws Exception {
         return this.successReturn().setData("list", service.findTableIndex(baseId, tableName));
     }
