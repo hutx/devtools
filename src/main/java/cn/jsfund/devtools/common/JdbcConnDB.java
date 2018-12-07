@@ -37,7 +37,6 @@ public class JdbcConnDB {
                 if (params.get(i).getClass().getTypeName().equals(String.class.getTypeName())) {
                     ps.setString(i + 1, (String) params.get(i));
                 }
-
             }
             logger.info("SQL:{}", sql);
             logger.info("params:<{}>", StringUtils.join(params, ","));

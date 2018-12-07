@@ -1,14 +1,12 @@
 package cn.jsfund.devtools.model;
 
+import javax.persistence.*;
 import org.apache.ibatis.type.JdbcType;
 import tk.mybatis.mapper.annotation.ColumnType;
-
-import javax.persistence.*;
 
 @Table(name = "gemfire_index")
 public class GemfireIndex {
     @Id
-    @Column(name = "id")
     @ColumnType(jdbcType = JdbcType.INTEGER)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

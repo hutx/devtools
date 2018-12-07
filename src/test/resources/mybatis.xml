@@ -41,7 +41,7 @@
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
         <!-- 要生成的表 tableName是数据库中的表名或视图名 domainObjectName是实体类名 -->
-       <!-- <table tableName="gemfire_bean">
+        <table tableName="gemfire_bean">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
         <table tableName="gemfire_index">
@@ -54,10 +54,19 @@
         <table tableName="gemfire_field">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
+        <table tableName="database_config">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
         <table tableName="event_field">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
-        </table>-->
-        <table tableName="database_config">
+        </table>
+        <table tableName="event_bean" >
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+        <table tableName="event_group">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+        <table tableName="user">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
     </context>

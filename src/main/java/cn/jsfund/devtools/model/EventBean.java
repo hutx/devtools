@@ -7,7 +7,6 @@ import tk.mybatis.mapper.annotation.ColumnType;
 @Table(name = "event_bean")
 public class EventBean {
     @Id
-    @Column(name = "id")
     @ColumnType(jdbcType = JdbcType.INTEGER)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -23,6 +22,10 @@ public class EventBean {
     @ColumnType(jdbcType = JdbcType.VARCHAR)
     private String remark;
 
+    @Column(name = "group_id")
+    @ColumnType(jdbcType = JdbcType.INTEGER)
+    private Integer groupId;
+
     public static final String TABLE = "event_bean";
 
     public static final String f_id = "id";
@@ -32,6 +35,8 @@ public class EventBean {
     public static final String f_classCnName = "classCnName";
 
     public static final String f_remark = "remark";
+
+    public static final String f_groupId = "groupId";
 
     /**
      * @return id
@@ -87,5 +92,19 @@ public class EventBean {
      */
     public void setRemark(String remark) {
         this.remark = remark == null ? null : remark.trim();
+    }
+
+    /**
+     * @return group_id
+     */
+    public Integer getGroupId() {
+        return groupId;
+    }
+
+    /**
+     * @param groupId
+     */
+    public void setGroupId(Integer groupId) {
+        this.groupId = groupId;
     }
 }

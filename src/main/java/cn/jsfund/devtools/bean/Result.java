@@ -48,7 +48,9 @@ public class Result {
     private String codeDetail = "";
 
     // 返回的数据
-    private Object data = null;
+    private Object list = null;
+
+    private Pagination pagination;
 
     // 返回的信息
     private String msg = "";
@@ -63,32 +65,38 @@ public class Result {
     private String requestId = "";
 
     public Result() {
-        this(SUCCESS, null, null, null, null, null);
+        this(SUCCESS, null, null, null, null, null, null);
     }
 
-    public Result(int code, Object data, String msg, String msgDetail) {
-        this(code, data, msg, msgDetail, null, null);
+    public Result(int code, Object list, String msg, String msgDetail, Pagination pagination) {
+        this(code, list, msg, msgDetail, null, null, pagination);
     }
 
-    public Result(int code, Object data, String msg, Exception exception) {
-        this(code, data, msg, getDetailMsg(exception), null, null);
+
+    public Result(int code, Object list, String msg, String msgDetail) {
+        this(code, list, msg, msgDetail, null, null, null);
     }
 
-    public Result(int code, Object data, String msg, String msgDetail, String codeDetail, String moreInfo) {
+    public Result(int code, Object list, String msg, Exception exception) {
+        this(code, list, msg, getDetailMsg(exception), null, null, null);
+    }
+
+    public Result(int code, Object list, String msg, String msgDetail, String codeDetail, String moreInfo, Pagination pagination) {
         this.code = code;
-        this.data = data;
+        this.list = list;
         this.msg = msg;
         this.msgDetail = msgDetail;
         this.codeDetail = codeDetail;
         this.moreInfo = moreInfo;
+        this.pagination = pagination;
     }
 
     public String getCodeDetail() {
         return codeDetail;
     }
 
-    public Object getData() {
-        return data;
+    public Object getList() {
+        return list;
     }
 
     public String getMsg() {
@@ -113,6 +121,14 @@ public class Result {
 
     public String getRequestId() {
         return requestId;
+    }
+
+    public Pagination getPagination() {
+        return pagination;
+    }
+
+    public void setPagination(Pagination pagination) {
+        this.pagination = pagination;
     }
 
     /**
@@ -146,10 +162,10 @@ public class Result {
      */
     public Result setData(String key, Object value) {
         // 如果data不是JSONObject对象，则将data转化为JSONObject对象
-        if (!(this.data instanceof JSONObject)) {
-            this.data = JSONObject.parseObject(JSON.toJSONString(this.data));
+        if (!(this.list instanceof JSONObject)) {
+            this.list = JSONObject.parseObject(JSON.toJSONString(this.list));
         }
-        ((JSONObject) this.data).put(key, value);
+        ((JSONObject) this.list).put(key, value);
         return this;
     }
 }

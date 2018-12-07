@@ -7,7 +7,6 @@ import tk.mybatis.mapper.annotation.ColumnType;
 @Table(name = "gemfire_field")
 public class GemfireField {
     @Id
-    @Column(name = "id")
     @ColumnType(jdbcType = JdbcType.INTEGER)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

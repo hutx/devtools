@@ -39,6 +39,9 @@ public interface BaseService<T> {
 
     T delete(T entity) throws Exception;
 
+    int delete(Integer [] ids) throws Exception;
+
+
     /**
      * 通用查询方法
      *

@@ -7,7 +7,6 @@ import tk.mybatis.mapper.annotation.ColumnType;
 @Table(name = "event_field")
 public class EventField {
     @Id
-    @Column(name = "id")
     @ColumnType(jdbcType = JdbcType.INTEGER)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -52,12 +51,12 @@ public class EventField {
     private Integer isNull;
 
     @Column(name = "min_value")
-    @ColumnType(jdbcType = JdbcType.VARCHAR)
-    private String minValue;
+    @ColumnType(jdbcType = JdbcType.INTEGER)
+    private Integer minValue;
 
     @Column(name = "max_vale")
-    @ColumnType(jdbcType = JdbcType.VARCHAR)
-    private String maxVale;
+    @ColumnType(jdbcType = JdbcType.INTEGER)
+    private Integer maxVale;
 
     /**
      * 描述
@@ -108,7 +107,7 @@ public class EventField {
     public static final Integer c_isNull_N = 0;
 
     /**
-     * @return ID
+     * @return id
      */
     public Integer getId() {
         return id;
@@ -228,29 +227,29 @@ public class EventField {
     /**
      * @return min_value
      */
-    public String getMinValue() {
+    public Integer getMinValue() {
         return minValue;
     }
 
     /**
      * @param minValue
      */
-    public void setMinValue(String minValue) {
-        this.minValue = minValue == null ? null : minValue.trim();
+    public void setMinValue(Integer minValue) {
+        this.minValue = minValue;
     }
 
     /**
      * @return max_vale
      */
-    public String getMaxVale() {
+    public Integer getMaxVale() {
         return maxVale;
     }
 
     /**
      * @param maxVale
      */
-    public void setMaxVale(String maxVale) {
-        this.maxVale = maxVale == null ? null : maxVale.trim();
+    public void setMaxVale(Integer maxVale) {
+        this.maxVale = maxVale;
     }
 
     /**

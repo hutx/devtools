@@ -5,15 +5,15 @@
     <!--
       WARNING - @mbg.generated
     -->
-    <result column="ID" jdbcType="INTEGER" property="id" />
+    <result column="id" jdbcType="INTEGER" property="id" />
     <result column="class_id" jdbcType="INTEGER" property="classId" />
     <result column="field_code" jdbcType="VARCHAR" property="fieldCode" />
     <result column="field_name" jdbcType="VARCHAR" property="fieldName" />
     <result column="field_type" jdbcType="VARCHAR" property="fieldType" />
     <result column="is_key" jdbcType="INTEGER" property="isKey" />
     <result column="is_null" jdbcType="INTEGER" property="isNull" />
-    <result column="min_value" jdbcType="VARCHAR" property="minValue" />
-    <result column="max_vale" jdbcType="VARCHAR" property="maxVale" />
+    <result column="min_value" jdbcType="INTEGER" property="minValue" />
+    <result column="max_vale" jdbcType="INTEGER" property="maxVale" />
     <result column="comment" jdbcType="VARCHAR" property="comment" />
   </resultMap>
 </mapper>

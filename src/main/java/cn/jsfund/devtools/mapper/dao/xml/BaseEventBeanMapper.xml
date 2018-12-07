@@ -9,5 +9,6 @@
     <result column="class_name" jdbcType="VARCHAR" property="className" />
     <result column="class_cn_name" jdbcType="VARCHAR" property="classCnName" />
     <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="group_id" jdbcType="INTEGER" property="groupId" />
   </resultMap>
 </mapper>

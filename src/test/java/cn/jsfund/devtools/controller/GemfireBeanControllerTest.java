@@ -28,7 +28,7 @@ public class GemfireBeanControllerTest {
         Result result = gemfireBeanController.add(gemfireBean);
         logger.info("result:<{}> ", result);
         gemfireBean.setId(1);
-        result = gemfireBeanController.delete(gemfireBean);
+       // result = gemfireBeanController.delete(gemfireBean);
         logger.info("result:<{}> ", result);
 
     }

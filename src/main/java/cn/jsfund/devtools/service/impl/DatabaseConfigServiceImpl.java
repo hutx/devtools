@@ -19,7 +19,7 @@ public class DatabaseConfigServiceImpl extends BaseServiceImpl<DatabaseConfig> i
 
     @Autowired
     private DatabaseConfigMapper mapper;
-
+    @Override
     public Mapper<DatabaseConfig> getMapper() {
         return mapper;
     }

@@ -29,6 +29,13 @@ public abstract class BaseServiceImpl<T> implements BaseService<T> {
         return entity;
     }
 
+    public int delete(Integer [] ids) throws Exception {
+        int i=0;
+        for (Integer id : ids) {
+            i= getRealMapper().deleteByPrimaryKey(id);
+        }
+        return i;
+    }
 
     public T updateByPrimaryKey(T entity) throws Exception {
         getRealMapper().updateByPrimaryKey(entity);
@@ -49,16 +56,13 @@ public abstract class BaseServiceImpl<T> implements BaseService<T> {
     public PageInfo<T> queryByPage(Page<T> page, T entity) throws Exception {
         PageHelper.startPage(page.getPageNum(), page.getPageSize());
         List<T> list = getRealMapper().select(entity);
-        PageInfo<T> pageInfo = new PageInfo<T>(list);
-
+        PageInfo<T> pageInfo = new PageInfo<>(list);
         return pageInfo;
     }
-
 
     public List<T> list(T entity) throws Exception {
         return getRealMapper().select(entity);
     }
-
 
     public T listOne(T entity) throws Exception {
         return getRealMapper().selectOne(entity);
