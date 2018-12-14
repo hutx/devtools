@@ -28,6 +28,6 @@ public class GemfireIndexController extends BaseWebController<GemfireIndex> {
 
     @GetMapping("/findTableIndex")
     public Result findTableField(@RequestParam(required = true) int baseId, @RequestParam(required = true) String tableName) throws Exception {
-        return this.successReturn().setData("list", service.findTableIndex(baseId, tableName));
+        return this.successReturn(service.findTableIndex(baseId, tableName));
     }
 }

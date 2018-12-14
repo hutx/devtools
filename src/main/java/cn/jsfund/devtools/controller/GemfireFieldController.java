@@ -28,6 +28,6 @@ public class GemfireFieldController extends BaseWebController<GemfireField> {
 
     @GetMapping({"/findTableField"})
     public Result findTableField(@RequestParam(required = true) int baseId, @RequestParam(required = true) String tableName) throws Exception {
-        return this.successReturn().setData("list", service.findTableField(baseId, tableName));
+        return this.successReturn(service.findTableField(baseId, tableName));
     }
 }

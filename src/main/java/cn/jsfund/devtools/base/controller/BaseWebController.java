@@ -51,7 +51,7 @@ public abstract class BaseWebController<T> extends BaseController {
     public Result list(@RequestParam(required = false) T entity) {
         try {
             BaseService service = this.getRealService();
-            return this.successReturn().setData("list", service.list(entity));
+            return this.successReturn(service.list(entity));
         } catch (Exception var4) {
             this.handleExeception(var4);
             return this.successReturn();

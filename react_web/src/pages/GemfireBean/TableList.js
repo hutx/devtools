@@ -18,6 +18,7 @@ import {
 } from 'antd';
 import StandardTable from '@/components/StandardTable';
 import PageHeaderWrapper from '@/components/PageHeaderWrapper';
+import EditFormBean from './editForm';
 
 import styles from './TableList.less';
 
@@ -107,21 +108,26 @@ class UpdateForm extends PureComponent {
         onOk={this.okHandle}
         onCancel={() => handleUpdateModalVisible()}
       >
+        <Form layout="vertical">
+        
+          <FormItem labelCol={{ span: 5 }} wrapperCol={{ span: 15 }} label="类名称">
+            {form.getFieldDecorator('className', {initialValue: formVals.className,
+              rules: [{ required: true, message: '请输入类型名称！' }],
+            })(<Input placeholder="请输入类名称" />)}
+          </FormItem>
 
-      <FormItem labelCol={{ span: 5 }} wrapperCol={{ span: 15 }} label="类名称" >
-        {form.getFieldDecorator('className', {initialValue: formVals.className,
-          rules: [{ required: true, message: '请输入类型名称！' }],
-        })(<Input placeholder="请输入类名称" />)}
-      </FormItem>
-      <FormItem labelCol={{ span: 5 }} wrapperCol={{ span: 15 }} label="类中文名称" >
-        {form.getFieldDecorator('classCnName', {initialValue: formVals.classCnName,
-          rules: [{ required: true, message: '请输入类中文名称！' }],
-        })(<Input placeholder="请输入类中文名称" />)}
-      </FormItem>
-      <FormItem labelCol={{ span: 5 }} wrapperCol={{ span: 15 }} label="描述信息" >
-        {form.getFieldDecorator('remark',{initialValue: formVals.remark,
-        })(<Input placeholder="请输入描述信息" />)}
-      </FormItem>
+          <FormItem labelCol={{ span: 5 }} wrapperCol={{ span: 15 }} label="类中文名称">
+            {form.getFieldDecorator('classCnName', {initialValue: formVals.classCnName,
+              rules: [{ required: true, message: '请输入类中文名称！' }],
+            })(<Input placeholder="请输入类中文名称" />)}
+          </FormItem>
+
+          <FormItem labelCol={{ span: 5 }} wrapperCol={{ span: 15 }} label="描述信息">
+            {form.getFieldDecorator('remark',{initialValue: formVals.remark,
+            })(<Input placeholder="请输入描述信息" />)}
+          </FormItem>
+
+        </Form>
       </Modal>
     );
   }
@@ -137,6 +143,7 @@ class TableList extends PureComponent {
   state = {
     modalVisible: false,
     updateModalVisible: false,
+    editBeanModalVisible: false,
     expandForm: false,
     selectedRows: [],
     formValues: {},
@@ -162,7 +169,7 @@ class TableList extends PureComponent {
         <Fragment>
           <a onClick={() => this.handleUpdateModalVisible(true, record)}>修改</a>
           <Divider type="vertical" />
-          <a href="">添加Bean字段</a>
+          <a onClick={() => this.handleEditBeanModalVisible(true, record)}>添加Bean字段</a>
         </Fragment>
       ),
     },
@@ -283,6 +290,19 @@ class TableList extends PureComponent {
     });
   };
 
+  handleEditBeanModalVisible = (flag,record) =>{
+    this.setState({
+      editBeanModalVisible: !!flag,
+      stepFormValues: record || {},
+    })
+  }
+
+  handleEditFieldBean =fields =>{
+    const { dispatch } = this.props;
+
+    this.handleEditBeanModalVisible();
+  }
+
   handleAdd = fields => {
     const { dispatch } = this.props;
     
@@ -388,7 +408,7 @@ class TableList extends PureComponent {
       gemfire: { data },
       loading,
     } = this.props;
-    const { selectedRows, modalVisible, updateModalVisible, stepFormValues } = this.state; 
+    const { selectedRows, modalVisible, updateModalVisible, editBeanModalVisible, stepFormValues } = this.state; 
 
     const parentMethods = {
       handleAdd: this.handleAdd,
@@ -398,6 +418,10 @@ class TableList extends PureComponent {
       handleUpdateModalVisible: this.handleUpdateModalVisible,
       handleUpdate: this.handleUpdate,
     }; 
+    const editBeanMethods = {
+      handleEditBeanModalVisible: this.handleEditBeanModalVisible,
+      handleEditField: this.handleEditFieldBean,
+    };
     return (      
       <PageHeaderWrapper title="GemfireBean">
         <Card bordered={false}>
@@ -426,13 +450,18 @@ class TableList extends PureComponent {
           </div>
         </Card>
         <CreateForm {...parentMethods} modalVisible={modalVisible} />
-        {stepFormValues && Object.keys(stepFormValues).length ? (
+        
+        {stepFormValues && Object.keys(stepFormValues).length ? (          
           <UpdateForm
             {...updateMethods}
             updateModalVisible={updateModalVisible}
             values={stepFormValues}
           />
         ) : null}  
+
+        {stepFormValues && Object.keys(stepFormValues).length ?(
+          <EditFormBean {...editBeanMethods} modalVisible={editBeanModalVisible} values={stepFormValues} />
+        ):null}
       </PageHeaderWrapper>
     );
   }

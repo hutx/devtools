@@ -8,6 +8,7 @@ import cn.jsfund.devtools.model.GemfireField;
 import cn.jsfund.devtools.service.DatabaseConfigService;
 import cn.jsfund.devtools.service.GemfireFieldService;
 import cn.jsfund.devtools.util.SqlUtil;
+import org.mybatis.generator.codegen.mybatis3.MyBatis3FormattingUtilities;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
