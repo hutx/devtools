@@ -1,4 +1,4 @@
-import { stringify } from 'qs';
+import {stringify} from 'qs';
 import request from '@/utils/request';
 
 export async function queryProjectNotice() {
@@ -9,36 +9,62 @@ export async function queryActivities() {
   return request('/api/activities');
 }
 
-export async function queryGemfireBean(params){
-   console.log("params:<{}>,stringify<{}>",params,stringify(params));  
+export async function queryGemfireBean(params) {
+  console.log("params:<{}>,stringify<{}>", params, stringify(params));
   // return request('/api/gemfireBeans/query');
 
-   return request(`/api/gemfireBeans/query?${stringify(params)}`);}
+  return request(`/api/gemfireBeans/query?${stringify(params)}`);
+}
 
-export async function addGemfireBean(params){
-  return request('/api/gemfireBeans',{
-    method :'POST',
-    body:{
-      ...params,
+export async function addGemfireBean(params) {
+  return request('/api/gemfireBeans', {
+    method: 'POST',
+    body: {
+      ...params
     }
   })
 }
 
-export async function removeGemfireBean(params){
+export async function queryFieldInfo(params) {
+  return request(`/api/gemfireBeans/fieldInfo?${stringify(params)}`);
+}
+
+export async function saveField(params) {
+  return request('/api/gemfireBeans/saveField', {
+    method: 'POST',
+    body: {
+      ...params
+    }
+  })
+}
+
+export async function batchAddField(params) {
+  return request('/api/gemfireFields/batchAdd', {
+    method: 'POST',
+    body: params
+  })
+}
+
+export async function batchAddFieldIndex(params) {
+  return request('/api/gemfireIndexs/batchAdd', {
+    method: 'POST',
+    body: params
+  })
+}
+
+export async function removeGemfireBean(params) {
   return request('/api/gemfireBeans', {
     method: 'DELETE',
-    body: {
-      ...params,
-    }
+    body: params
   });
 }
 
-export async function updateGemfireBean(params){
+export async function updateGemfireBean(params) {
   return request('/api/gemfireBeans', {
     method: 'PUT',
     body: {
-      ...params,
-    },
+      ...params
+    }
   });
 }
 
@@ -51,8 +77,8 @@ export async function removeRule(params) {
     method: 'POST',
     body: {
       ...params,
-      method: 'delete',
-    },
+      method: 'delete'
+    }
   });
 }
 
@@ -61,8 +87,8 @@ export async function addRule(params) {
     method: 'POST',
     body: {
       ...params,
-      method: 'post',
-    },
+      method: 'post'
+    }
   });
 }
 
@@ -71,14 +97,14 @@ export async function updateRule(params) {
     method: 'POST',
     body: {
       ...params
-    },
+    }
   });
 }
 
 export async function fakeSubmitForm(params) {
   return request('/api/forms', {
     method: 'POST',
-    body: params,
+    body: params
   });
 }
 
@@ -103,49 +129,58 @@ export async function queryFakeList(params) {
 }
 
 export async function removeFakeList(params) {
-  const { count = 5, ...restParams } = params;
+  const {
+    count = 5,
+    ...restParams
+  } = params;
   return request(`/api/fake_list?count=${count}`, {
     method: 'POST',
     body: {
       ...restParams,
-      method: 'delete',
-    },
+      method: 'delete'
+    }
   });
 }
 
 export async function addFakeList(params) {
-  const { count = 5, ...restParams } = params;
+  const {
+    count = 5,
+    ...restParams
+  } = params;
   return request(`/api/fake_list?count=${count}`, {
     method: 'POST',
     body: {
       ...restParams,
-      method: 'post',
-    },
+      method: 'post'
+    }
   });
 }
 
 export async function updateFakeList(params) {
-  const { count = 5, ...restParams } = params;
+  const {
+    count = 5,
+    ...restParams
+  } = params;
   return request(`/api/fake_list?count=${count}`, {
     method: 'POST',
     body: {
       ...restParams,
-      method: 'update',
-    },
+      method: 'update'
+    }
   });
 }
 
 export async function fakeAccountLogin(params) {
   return request('/api/users/login', {
     method: 'POST',
-    body: params,
+    body: params
   });
 }
 
 export async function fakeRegister(params) {
   return request('/api/register', {
     method: 'POST',
-    body: params,
+    body: params
   });
 }
 

@@ -1,186 +1,252 @@
-import React, { PureComponent, Fragment } from 'react';
-import { connect } from 'dva';
+
+import React, {PureComponent,Fragment} from 'react';
+ import {connect} from 'dva';
 import {
   Row,
   Col,
-  Card,
   Form,
-  Table,
   Input,
   Select,
-  Spin,
-  Icon,
   Button,
-  Dropdown,
-  Menu,
-  Modal,
-  message,
   Divider,
-  Steps,
+  Drawer,
 } from 'antd';
+
 import debounce from 'lodash/debounce';
 import DescriptionList from '@/components/DescriptionList';
-import StandardTable from '@/components/StandardTable';
-import PageHeaderWrapper from '@/components/PageHeaderWrapper';
 import FieldList from './fieldList';
 import IndexList from './indexList'
-import { stringify } from 'qs';
-
-const { Description } = DescriptionList;
-
-const FormItem = Form.Item;
-const Option =Select.Option;
-const Search = Input.Search;
-
 import styles from './TableList.less';
-import { log } from 'util';
 
+const {Description} = DescriptionList;
+// const  FormItem = Form.Item;
+const {Option} = Select;
+const {Search} = Input;
+
+@connect(({field, loading}) => ({field, loading: loading.models.field}))
 @Form.create()
-class EditFormBean extends PureComponent {
+class EditForm extends PureComponent {
   constructor(props) {
     super(props);
-    this.lastFetchId =0;
-    this.fetchSource = debounce(this.fetchSource,800);
+    this.lastFetchId = 0;
+    this.fetchSource = debounce(this.fetchSource, 800);
     this.state = {
       formVals: {
-        classId : props.values.id,
+        classId: props.values.id,
         className: props.values.className,
         classCnName: props.values.classCnName,
-        remark: props.values.remark,
+        remark: props.values.remark
       },
-      loading:false,
-      data:[],
-      value:"",
-      dbValue:"",
-      fetching:false,
-      sourceData:[],   
+      loading: false,
+      fieldData: [],
+      indexData: [],
+      value: "",
+      dbValue: "",
+      fetching: false,
+      sourceData: [],
+      selectFieldRows: [],
+      
     };
   }
 
-  state ={
-    
-  }
-
-  componentDidMount() {    
+  componentDidMount() {
     this.fetchSource();
+
+    const {formVals} = this.state;
+    const {dispatch} = this.props;
+
+    dispatch({
+      type: 'field/fetchFieldInfo',
+      payload: {
+        classId:formVals.classId,
+      }
+    });
   }
 
-  
   okHandle = () => {
-    const { form, handleEditField } = this.props;
-    const { formVals: oldValue } = this.state;
-    form.validateFields((err, fieldsValue) => {
-      if (err) return;
-      const formVals = { ...oldValue, ...fieldsValue };
-      this.setState({formVals,},
-        () => {          
-            handleEditField(formVals);
-        }
-      );
-    });
-  };
+    const {formVals, fieldData, indexData} = this.state;
+
+    const {
+      form: { validateFieldsAndScroll },
+      dispatch,
+      handleEditBeanModalVisible,
+    } = this.props;
+    validateFieldsAndScroll((error, values) => {
+      if (!error) {
+        const newData = values.field.map((item) => ({
+          id: item.id.indexOf('NEW_TEMP_ID')? item.id :'',
+          fieldCode: item.fieldCode,
+          fieldName: item.fieldName,
+          fieldType: item.fieldType,
+          isKey: item.isKey,
+          isNull: item.isNull,
+          comment: item.fieldName,
+          classId:formVals.classId
+        }));        
+       
+      
+        const newIndexData =values.index.map((item) =>({
+          id: item.id.indexOf('NEW_INDEX_ID_')? item.id:'',
+          fieldCode: item.fieldCode,
+          classId:formVals.classId
+        }));
+      
+        dispatch({
+          type: 'field/saveField',
+          payload: {
+            fieldList:newData,
+            indexList:newIndexData,
+            classId:formVals.classId,
+          }
+        });       
+      }
+    });    
   
-  fetchSource = (value) => {
-    console.log('fetching user', value);
+    handleEditBeanModalVisible();
+
+  };
+
+  fetchSource = () => {
     this.lastFetchId += 1;
     const fetchId = this.lastFetchId;
-    this.setState({ sourceData: [] });
+    this.setState({sourceData: []});
     fetch('/api/databaseConfigs/list')
       .then(response => response.json())
       .then((body) => {
         if (fetchId !== this.lastFetchId) { // for fetch callback order
           return;
         }
-        const sourceData = body.list.map(item => ({
-          text: `${item.id} ${item.name}`,
-          value: item.id,
-        }));
-        // const dbValue = sourceData.length>0 ? sourceData[0]:'';
-        this.setState({ sourceData });
+        const sourceData = body.list.map(item => ({text: `${item.id}_${item.name}`, value: item.id}));
+
+        this.setState({
+          sourceData,
+          dbValue: sourceData[0].value || null
+        });
       });
   }
 
-  handleDBChange =(dbValue) =>{
-    this.setState({
-      dbValue,
-    });
+  handleDBChange = (dbValue) => {
+    this.setState({dbValue});
   }
 
-  handleSearch = value =>{
+  handleSearch = value => {
     const {dbValue} = this.state;
-    const param={baseId:dbValue,tableName:value};
-    this.setState({ data: [], fetching: true });
-    fetch(`/api/gemfireFields/findTableField?${stringify(param)}`)
-      .then(response => response.json())
-      .then((body) => {
-        console.log(body);
-        const data = body.list.map((item,index) => ({
-          id: `NEW_TEMP_ID_${index}`,
-          fieldCode: item.fieldCode,
-          fieldName: item.fieldName,
-          fieldType: item.fieldType,
-          comment: item.fieldName,
-          editable:false,     
-        }));
-        this.setState({ data, fetching: false });
-      });
+    const { form} = this.props;    
+    const param = {
+      baseId: dbValue,
+      tableName: value
+    };
+    form.getFieldInstance('field').fetchField(param);
   }
 
+  handleFieldChange = value => {
+    this.setState({fieldData:value});
+
+  }
+
+  handleSelectFieldRows = rows => {
+    this.setState({selectFieldRows: rows});
+  }
+
+  handleAddIndex = () => {
+    const {selectFieldRows} = this.state;
+    const { form} = this.props;
+    
+   form.getFieldInstance('index').handleAdd(selectFieldRows);
+    // this.setState({indexData: newData});
+    // form.getFieldInstance('field').fetchField(param);
+  }
+
+  handleChandgeIndexData = data => {
+    this.setState({indexData: data})
+  }
 
   render() {
-    const { modalVisible, handleEditBeanModalVisible, form } = this.props;
-    const { formVals, loading, value, dbValue, sourceData, fetching, data } = this.state;
+   
+    const {field: {
+      data
+    },modalVisible, handleEditBeanModalVisible, form} = this.props;
+    const {
+      formVals,
+      loading,
+      value,
+      dbValue,
+      sourceData,
+      indexData,
+      fetching,
+      fieldData
+    } = this.state;
 
     return (
-      <Modal
-        width={1280}
-        bodyStyle={{ padding: '10px 40px 48px' }}
+      <Drawer
+        width={1128}
+        placement="right"
         destroyOnClose
+        bodyStyle={{padding: '10px 40px 48px'}}
         visible={modalVisible}
         title="编辑Bean字段"
-        onOk={this.okHandle}
-        onCancel={() => handleEditBeanModalVisible()}
+        onClose={() => handleEditBeanModalVisible()}
       >
+       
         <DescriptionList size="large" title="Bean信息">
           <Description term="类名称">{formVals.className}</Description>
           <Description term="类中文名称">{formVals.classCnName}</Description>
         </DescriptionList>
-        
+
         <Divider />
         <Row>
-          <Col span={8}><div className={styles.title}>字段信息</div> </Col>
-          <Col span={16} style={{textAlign:"right"}}>
+          <Col span={8}>
+            <div className={styles.title}>字段信息</div>
+          </Col>
+          <Col span={16} style={{textAlign: "right"}}>
             <Select
               showSearch
               value={dbValue}
-              style={{ width: 200, marginRight:10  }}
+              style={{
+              width: 200,
+              marginRight: 10
+            }}
               placeholder="Select a DB"
               optionFilterProp="children"
               onChange={this.handleDBChange}
-              filterOption={(input, option) => option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}              
+              filterOption={(input, option) => option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}
             >
               {sourceData.map(d => <Option key={d.value}>{d.text}</Option>)}
             </Select>
 
-            <Search
-              style={{width:300, marginRight:10}}
-              placeholder="input search table name"
-              onSearch={this.handleSearch}
-              enterButton="添加字段"
-            />
+            <Search style={{ width: 300, marginRight: 10 }} placeholder="input search table name" onSearch={this.handleSearch} enterButton="添加字段" />
           </Col>
-        </Row>        
-        <FieldList data={data} loading={fetching} />
-        <Divider />
-        <Row>
-          <Col span={8}><div className={styles.title}>索引信息</div> </Col>
-          <Col span={8} offset={8} style={{textAlign:"right"}}><Button type="primary">添加索引</Button></Col>
         </Row>
-        <IndexList values={[]} />
-      </Modal>
+        <Form layout="vertical">
+          <Form.Item>
+            {form.getFieldDecorator('field', {
+                initialValue: data.fieldList,
+              })(<FieldList onSelectFieldRows={this.handleSelectFieldRows} />)} 
+          </Form.Item>      
+          <Divider />
+          <Row>
+            <Col span={8}>
+              <div className={styles.title}>索引信息</div>
+            </Col>
+            <Col span={8} offset={8} style={{ textAlign: "right" }}>
+              <Button type="primary" onClick={this.handleAddIndex}>添加索引</Button>
+            </Col>
+          </Row>
+          <Form.Item>
+            {form.getFieldDecorator('index', {
+                initialValue: data.indexList,
+              })(<IndexList />)}
+          </Form.Item>
+        </Form>
+        <Divider />
+        <div style={{position: 'absolute', left: 0, bottom: 0, width: '100%', padding: '10px 16px', textAlign: 'right' }}>
+          <Button type="primary" onClick={() => handleEditBeanModalVisible()} style={{ marginRight: 8 }}>取消 </Button>
+          <Button type="primary" onClick={this.okHandle}>确定</Button>
+        </div>
+        
+      </Drawer>
     );
   }
 }
 
-
-export default EditFormBean;
+export default EditForm;

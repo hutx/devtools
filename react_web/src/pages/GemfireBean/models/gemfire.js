@@ -1,5 +1,5 @@
 import { message } from 'antd';
-import { queryGemfireBean, removeGemfireBean, addGemfireBean, updateGemfireBean } from '@/services/api';
+import { queryGemfireBean, removeGemfireBean, addGemfireBean, updateGemfireBean,batchAddFieldGemfireBean,saveField,queryFieldInfo } from '@/services/api';
 
 export default {
   namespace: 'gemfire',
@@ -36,6 +36,22 @@ export default {
       
       if (callback) callback();
     },
+    *batchAddField({ payload, callback }, { call,put }) {
+      const response = yield call(batchAddFieldGemfireBean, payload);
+      if(response.code ===200){
+       message.success('提交成功!');
+       const rps = yield call(queryGemfireBean, {});
+       yield put({
+         type: 'query',
+         payload: rps,
+       });
+      }else{
+       message.error('提交失败!');
+      }
+     // yield call(addGemfireBean, payload);
+     
+     if (callback) callback();
+   },
     *remove({ payload, callback }, { call, put }) {
       const response = yield call(removeGemfireBean, payload);
       if(response.code ===200){
@@ -60,7 +76,7 @@ export default {
       if (callback) callback();
     },
   },
-
+ 
   reducers: {
     save(state, action) {
       return {
@@ -69,10 +85,18 @@ export default {
       };
     },
     query(state,action){
-        return {
-            ...state,
-            data: action.payload,
-          }
+      return {
+          ...state,
+          data: action.payload,
+        }
+    },
+    queryField(state,action){
+      return {
+          ...state,
+          data: action.payload.fieldList,
+          indexData: action.payload.indexList
+        }
     }
+
   },
 };

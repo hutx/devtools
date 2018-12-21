@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.iquantex.devtools.mapper.dao.java.EventBeanMapper">
+  <resultMap id="BaseResultMap" type="com.iquantex.devtools.model.EventBean">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="id" jdbcType="INTEGER" property="id" />
+    <result column="class_name" jdbcType="VARCHAR" property="className" />
+    <result column="class_cn_name" jdbcType="VARCHAR" property="classCnName" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="group_id" jdbcType="INTEGER" property="groupId" />
+  </resultMap>
+</mapper>

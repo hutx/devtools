@@ -99,9 +99,9 @@ class BasicLayout extends React.PureComponent {
     dispatch({
       type: 'user/fetchCurrent',
     });
-    dispatch({
-      type: 'setting/getSetting',
-    });
+    // dispatch({
+    //   type: 'setting/getSetting',
+    // });
     this.renderRef = requestAnimationFrame(() => {
       this.setState({
         rendering: false,
