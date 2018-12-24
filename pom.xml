@@ -85,12 +85,12 @@
             <groupId>tk.mybatis</groupId>
             <artifactId>mapper-spring-boot-starter</artifactId>
             <version>1.1.4</version>
-            <exclusions>
+            <!--<exclusions>
             <exclusion>
             <groupId>tk.mybatis</groupId>
             <artifactId>mapper</artifactId>
             </exclusion>
-            </exclusions>
+            </exclusions>-->
         </dependency>
         <!--pagehelper-->
         <dependency>
