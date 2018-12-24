@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.jsfund.devtools.mapper.dao.java.UserMapper">
+  <resultMap id="BaseResultMap" type="cn.jsfund.devtools.model.User">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="id" jdbcType="INTEGER" property="id" />
+    <result column="user_id" jdbcType="VARCHAR" property="userId" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="avatar" jdbcType="VARCHAR" property="avatar" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="signature" jdbcType="VARCHAR" property="signature" />
+    <result column="dep" jdbcType="VARCHAR" property="dep" />
+    <result column="tags" jdbcType="VARCHAR" property="tags" />
+    <result column="notify_count" jdbcType="INTEGER" property="notifyCount" />
+    <result column="unread_count" jdbcType="INTEGER" property="unreadCount" />
+    <result column="country" jdbcType="VARCHAR" property="country" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+  </resultMap>
+</mapper>
