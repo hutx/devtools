@@ -1,7 +1,6 @@
 package cn.jsfund.devtools.controller;
 
-import cn.jsfund.devtools.bean.Result;
-import cn.jsfund.devtools.model.GemfireBean;
+import cn.jsfund.devtools.entity.GemfireBean;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -25,11 +24,11 @@ public class GemfireBeanControllerTest {
         GemfireBean gemfireBean = new GemfireBean();
         gemfireBean.setClassCnName("fdsf");
         gemfireBean.setClassName("dd");
-        Result result = gemfireBeanController.add(gemfireBean);
+        /*Result result = gemfireBeanController.add(gemfireBean);
         logger.info("result:<{}> ", result);
         gemfireBean.setId(1);
        // result = gemfireBeanController.delete(gemfireBean);
-        logger.info("result:<{}> ", result);
+        logger.info("result:<{}> ", result);*/
 
     }
 

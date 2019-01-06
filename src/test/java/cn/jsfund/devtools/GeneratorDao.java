@@ -1,6 +1,5 @@
 package cn.jsfund.devtools;
 
-import com.iquantex.generator.MybatisBeanDaoGenerator;
 import org.junit.Test;
 
 /**
@@ -11,7 +10,7 @@ public class GeneratorDao {
     @Test
     public void generator() {
         try {
-            MybatisBeanDaoGenerator.generator();
+//            MybatisBeanDaoGenerator.generator();
         } catch (Exception e) {
             e.printStackTrace();
         }
