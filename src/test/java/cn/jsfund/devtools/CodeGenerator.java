@@ -119,7 +119,7 @@ public class CodeGenerator {
         // 配置自定义输出模板
         // templateConfig.setEntity();
 //        templateConfig.setService(null);
-        templateConfig.setController(null);
+//        templateConfig.setController(null);
 //        templateConfig.setXml(null);
         mpg.setTemplate(templateConfig);
 
@@ -133,6 +133,7 @@ public class CodeGenerator {
         strategy.setRestControllerStyle(true);
         strategy.setSuperControllerClass("cn.jsfund.devtools.base.controller.BaseWebController");
         strategy.setInclude(TABLES);
+        //serviceClassNameStartWithI
 //        strategy.setSuperEntityColumns("id");
         strategy.setControllerMappingHyphenStyle(true);
         //strategy.setTablePrefix(pc.getModuleName() + "_");

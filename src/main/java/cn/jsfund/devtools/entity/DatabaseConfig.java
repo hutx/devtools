@@ -8,7 +8,7 @@ import cn.jsfund.devtools.base.BaseEntity;
  * </p>
  *
  * @author hutx
- * @since 2019-01-05
+ * @since 2019-01-13
  */
 public class DatabaseConfig extends BaseEntity{
 

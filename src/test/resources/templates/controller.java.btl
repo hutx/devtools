@@ -11,7 +11,8 @@ import org.springframework.stereotype.Controller;
 <% if(isNotEmpty(superControllerClassPackage)){ %>
 import ${superControllerClassPackage};
 <% } %>
-
+import ${package.Service}.${table.serviceName};
+import ${package.Entity}.${entity};
 /**
  * <p>
  * ${table.comment!} 前端控制器
@@ -25,12 +26,12 @@ import ${superControllerClassPackage};
 <% }else{ %>
 @Controller
 <% } %>
-@RequestMapping("<% if(isNotEmpty(package.ModuleName)){ %>/package.ModuleName<% } %><% if(isNotEmpty(controllerMappingHyphenStyle)){ %>${controllerMappingHyphen}<% }else{ %>${table.entityPath}<% } %>")
+@RequestMapping("/api/<% if(isNotEmpty(package.ModuleName)){ %>/package.ModuleName<% } %><% if(isNotEmpty(controllerMappingHyphenStyle)){ %>${controllerMappingHyphen}<% }else{ %>${table.entityPath}<% } %>")
 <% if(kotlin){ %>
 class ${table.controllerName}<% if(isNotEmpty(superControllerClass)){ %> : ${superControllerClass}()<% } %>
 <% }else{ %>
     <% if(isNotEmpty(superControllerClass)){ %>
-public class ${table.controllerName} extends ${superControllerClass} {
+public class ${table.controllerName} extends ${superControllerClass}<${table.serviceName}, ${table.entityName}> {
     <% }else{ %>
 public class ${table.controllerName} {
     <% } %>

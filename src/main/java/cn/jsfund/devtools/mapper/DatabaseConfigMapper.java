@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * </p>
  *
  * @author hutx
- * @since 2019-01-05
+ * @since 2019-01-13
  */
 public interface DatabaseConfigMapper extends BaseMapper<DatabaseConfig> {
 
