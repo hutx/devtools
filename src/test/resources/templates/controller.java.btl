@@ -26,7 +26,7 @@ import ${package.Entity}.${entity};
 <% }else{ %>
 @Controller
 <% } %>
-@RequestMapping("/api/<% if(isNotEmpty(package.ModuleName)){ %>/package.ModuleName<% } %><% if(isNotEmpty(controllerMappingHyphenStyle)){ %>${controllerMappingHyphen}<% }else{ %>${table.entityPath}<% } %>")
+@RequestMapping("/api/<% if(isNotEmpty(package.ModuleName)){ %>${package.ModuleName}/<% } %><% if(isNotEmpty(controllerMappingHyphenStyle)){ %>${controllerMappingHyphen}<% }else{ %>${table.entityPath}<% } %>")
 <% if(kotlin){ %>
 class ${table.controllerName}<% if(isNotEmpty(superControllerClass)){ %> : ${superControllerClass}()<% } %>
 <% }else{ %>

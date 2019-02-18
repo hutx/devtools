@@ -32,11 +32,17 @@ public class CodeGenerator {
     private static String MODEL_PATH;
     private static String ENTITY_PATH;
     private static String XML_PATH;
+    private static String MODULE;
+    private static String PACKAGE;
 
     private static String AUTHOR;
 
 
     public static void main(String[] args) {
+        generator();
+    }
+
+    public static void generator() {
         InputStream in = CodeGenerator.class.getResourceAsStream("/mybatis_plus.properties");
         Properties pro = new Properties();
         try {
@@ -51,6 +57,9 @@ public class CodeGenerator {
             MODEL_PATH = pro.getProperty("modelPath");
             ENTITY_PATH = pro.getProperty("javaPath");
             XML_PATH = pro.getProperty("xmlPath");
+            MODULE = pro.getProperty("module");
+            PACKAGE = pro.getProperty("package");
+
             AUTHOR = pro.getProperty("author");
 
         } catch (IOException e) {
@@ -65,6 +74,7 @@ public class CodeGenerator {
         gc.setOutputDir(projectPath);
         gc.setAuthor(StringUtils.isNotEmpty(AUTHOR) ? AUTHOR : System.getProperty("user"));
         gc.setOpen(false);
+        //是否覆盖
         gc.setFileOverride(true);
         gc.setDateType(DateType.ONLY_DATE);
         mpg.setGlobalConfig(gc);
@@ -74,7 +84,7 @@ public class CodeGenerator {
         DataSourceConfig dsc = new DataSourceConfig();
 //               dsc.setDbType(DbType.MYSQL);
         dsc.setUrl(URL);
-//        dsc.setSchemaName("ims");
+
         dsc.setDriverName(DRIVER);
         dsc.setUsername(USER);
         dsc.setPassword(PASSWORD);
@@ -82,8 +92,10 @@ public class CodeGenerator {
 
         // 包配置
         PackageConfig pc = new PackageConfig();
-        //pc.setModuleName("rtcalc");
-        pc.setParent("cn.jsfund.devtools");
+        if (StringUtils.isNotEmpty(MODULE)) {
+            pc.setModuleName(MODULE);
+        }
+        pc.setParent(PACKAGE);
         mpg.setPackageInfo(pc);
 
         // 自定义配置
@@ -105,7 +117,8 @@ public class CodeGenerator {
             @Override
             public String outputFile(TableInfo tableInfo) {
                 // 自定义输出文件名
-                return projectPath + "/" + XML_PATH.replaceAll("\\.", "/") + "/"  //"/src/main/java/cn/jsfund/eda/mapper/xml/"
+                String module = StringUtils.isNotEmpty(MODULE) ? "/" + MODULE : "";
+                return projectPath + "/" + PACKAGE.replaceAll("\\.", "/") + module + "/mapper/xml/"  //"/src/main/java/cn/jsfund/eda/"
                         + tableInfo.getEntityName() + "Mapper" + StringPool.DOT_XML;
             }
         });
@@ -141,4 +154,5 @@ public class CodeGenerator {
         mpg.setTemplateEngine(new BeetlTemplateEngine());
         mpg.execute();
     }
+
 }

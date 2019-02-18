@@ -153,6 +153,14 @@ public class Result {
         return getStackMsg(e);
     }
 
+    public void setMsg(String msg) {
+        this.msg = msg;
+    }
+
+    public void setMsgDetail(String msgDetail) {
+        this.msgDetail = msgDetail;
+    }
+
     /**
      * 将数据添加到data
      *

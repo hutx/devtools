@@ -10,7 +10,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 @EnableTransactionManagement
-@MapperScan("cn.jsfund.devtools.mapper*")
+@MapperScan(basePackages = {"cn.jsfund.devtools.mapper*", "cn.jsfund.devtools.sys.mapper*"})
 public class MybatisPlusConfig {
 
     /**
