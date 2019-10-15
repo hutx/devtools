@@ -1,0 +1,600 @@
+2019-01-05 22:45:40.104  INFO DESKTOP-BG11PPK --- [  restartedMain] c.j.d.DevToolsApplication               :50 : Starting DevToolsApplication on DESKTOP-BG11PPK with PID 12508 (D:\hutx\work\devtools\target\classes started by hu in D:\hutx\work\devtools)
+2019-01-05 22:45:40.112 DEBUG DESKTOP-BG11PPK --- [  restartedMain] c.j.d.DevToolsApplication               :53 : Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2019-01-05 22:45:40.113  INFO DESKTOP-BG11PPK --- [  restartedMain] c.j.d.DevToolsApplication               :675 : No active profile set, falling back to default profiles: default
+2019-01-05 22:45:40.172  INFO DESKTOP-BG11PPK --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor:227 : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-01-05 22:45:40.173  INFO DESKTOP-BG11PPK --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor:227 : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-01-05 22:45:40.999  WARN DESKTOP-BG11PPK --- [  restartedMain] o.m.s.m.ClassPathMapperScanner          :166 : No MyBatis mapper was found in '[cn.jsfund.devtools.*.mapper*]' package. Please check your configuration.
+2019-01-05 22:45:41.167  WARN DESKTOP-BG11PPK --- [  restartedMain] o.m.s.m.ClassPathMapperScanner          :166 : No MyBatis mapper was found in '[cn.jsfund.devtools]' package. Please check your configuration.
+2019-01-05 22:45:41.790  INFO DESKTOP-BG11PPK --- [  restartedMain] trationDelegate$BeanPostProcessorChecker:330 : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$fb66a77f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-05 22:45:42.503  INFO DESKTOP-BG11PPK --- [  restartedMain] o.s.b.w.e.t.TomcatWebServer             :90 : Tomcat initialized with port(s): 8080 (http)
+2019-01-05 22:45:42.518  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.h.Http11NioProtocol               :173 : Initializing ProtocolHandler ["http-nio-8080"]
+2019-01-05 22:45:42.528  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.StandardService                 :173 : Starting service [Tomcat]
+2019-01-05 22:45:42.529  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.StandardEngine                  :173 : Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-01-05 22:45:42.537  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.AprLifecycleListener            :173 : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_77\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Intel\iCLS Client\;C:\PROGRAMDATA\ORACLE\JAVA\JAVAPATH;C:\PROGRAM FILES\DELL\DW WLAN CARD;C:\PROGRAM FILES\INTEL\ICLS CLIENT\;C:\WINDOWS\SYSTEM32;C:\WINDOWS;C:\WINDOWS\SYSTEM32\WBEM;C:\WINDOWS\SYSTEM32\WINDOWSPOWERSHELL\V1.0\;;C:\PROGRAM FILES (X86)\NVIDIA CORPORATION\PHYSX\COMMON;C:\PROGRAM FILES (X86)\MYSQL\MYSQL FABRIC 1.5 & MYSQL UTILITIES 1.5\;C:\PROGRAM FILES (X86)\MYSQL\MYSQL FABRIC 1.5 & MYSQL UTILITIES 1.5\DOCTRINE EXTENSIONS FOR PHP\;C:\PROGRAM FILES\GIT\CMD;C:\Program Files\Java\jdk1.8.0_77\BIN;D:\PROGRAM FILES\TORTOISESVN\BIN;D:\soft\apache-maven-3.3.9\BIN;D:\soft\gradle-2.14.1\BIN;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files\nodejs\;C:\WINDOWS\system32\config\systemprofile\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;d:\Program Files (x86)\Microsoft VS Code\bin;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Users\hu\AppData\Local\.meteor\;C:\Users\hu\AppData\Roaming\npm;C:\Users\hu\AppData\Local\Microsoft\WindowsApps;d:\Program Files (x86)\Microsoft VS Code\bin;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;;.]
+2019-01-05 22:45:42.722  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.C.[.[.[/]                       :173 : Initializing Spring embedded WebApplicationContext
+2019-01-05 22:45:42.722  INFO DESKTOP-BG11PPK --- [  restartedMain] o.s.w.c.ContextLoader                   :296 : Root WebApplicationContext: initialization completed in 2549 ms
+2019-01-05 22:45:42.980  INFO DESKTOP-BG11PPK --- [  restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure:56 : Init DruidDataSource
+2019-01-05 22:45:43.241  INFO DESKTOP-BG11PPK --- [  restartedMain] c.a.d.p.DruidDataSource                 :930 : {dataSource-1} inited
+2019-01-05 22:45:43.474  WARN DESKTOP-BG11PPK --- [  restartedMain] ConfigServletWebServerApplicationContext:554 : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'databaseConfigController': Unsatisfied dependency expressed through field 'baseService'; nested exception is org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type '?' available: expected single matching bean but found 8: databaseConfigServiceImpl,eventBeanServiceImpl,eventFieldServiceImpl,eventGroupServiceImpl,gemfireBeanServiceImpl,gemfireFieldServiceImpl,gemfireIndexServiceImpl,userServiceImpl
+2019-01-05 22:45:43.476  INFO DESKTOP-BG11PPK --- [  restartedMain] c.a.d.p.DruidDataSource                 :1825 : {dataSource-1} closed
+2019-01-05 22:45:43.482  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.StandardService                 :173 : Stopping service [Tomcat]
+2019-01-05 22:45:43.501  INFO DESKTOP-BG11PPK --- [  restartedMain] ConditionEvaluationReportLoggingListener:142 : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-01-05 22:45:43.508 ERROR DESKTOP-BG11PPK --- [  restartedMain] o.s.b.d.LoggingFailureAnalysisReporter  :42 : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field baseService in cn.jsfund.devtools.base.controller.BaseWebController required a single bean, but 8 were found:
+	- databaseConfigServiceImpl: defined in file [D:\hutx\work\devtools\target\classes\cn\jsfund\devtools\service\impl\DatabaseConfigServiceImpl.class]
+	- eventBeanServiceImpl: defined in file [D:\hutx\work\devtools\target\classes\cn\jsfund\devtools\service\impl\EventBeanServiceImpl.class]
+	- eventFieldServiceImpl: defined in file [D:\hutx\work\devtools\target\classes\cn\jsfund\devtools\service\impl\EventFieldServiceImpl.class]
+	- eventGroupServiceImpl: defined in file [D:\hutx\work\devtools\target\classes\cn\jsfund\devtools\service\impl\EventGroupServiceImpl.class]
+	- gemfireBeanServiceImpl: defined in file [D:\hutx\work\devtools\target\classes\cn\jsfund\devtools\service\impl\GemfireBeanServiceImpl.class]
+	- gemfireFieldServiceImpl: defined in file [D:\hutx\work\devtools\target\classes\cn\jsfund\devtools\service\impl\GemfireFieldServiceImpl.class]
+	- gemfireIndexServiceImpl: defined in file [D:\hutx\work\devtools\target\classes\cn\jsfund\devtools\service\impl\GemfireIndexServiceImpl.class]
+	- userServiceImpl: defined in file [D:\hutx\work\devtools\target\classes\cn\jsfund\devtools\service\impl\UserServiceImpl.class]
+
+
+Action:
+
+Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans, or using @Qualifier to identify the bean that should be consumed
+
+2019-01-05 22:48:07.688  INFO DESKTOP-BG11PPK --- [  restartedMain] c.j.d.DevToolsApplication               :50 : Starting DevToolsApplication on DESKTOP-BG11PPK with PID 7108 (D:\hutx\work\devtools\target\classes started by hu in D:\hutx\work\devtools)
+2019-01-05 22:48:07.695 DEBUG DESKTOP-BG11PPK --- [  restartedMain] c.j.d.DevToolsApplication               :53 : Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2019-01-05 22:48:07.695  INFO DESKTOP-BG11PPK --- [  restartedMain] c.j.d.DevToolsApplication               :675 : No active profile set, falling back to default profiles: default
+2019-01-05 22:48:07.745  INFO DESKTOP-BG11PPK --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor:227 : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-01-05 22:48:07.746  INFO DESKTOP-BG11PPK --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor:227 : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-01-05 22:48:08.490  WARN DESKTOP-BG11PPK --- [  restartedMain] o.m.s.m.ClassPathMapperScanner          :166 : No MyBatis mapper was found in '[cn.jsfund.devtools.*.mapper*]' package. Please check your configuration.
+2019-01-05 22:48:08.636  WARN DESKTOP-BG11PPK --- [  restartedMain] o.m.s.m.ClassPathMapperScanner          :166 : No MyBatis mapper was found in '[cn.jsfund.devtools]' package. Please check your configuration.
+2019-01-05 22:48:09.209  INFO DESKTOP-BG11PPK --- [  restartedMain] trationDelegate$BeanPostProcessorChecker:330 : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b8612d66] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-05 22:48:09.732  INFO DESKTOP-BG11PPK --- [  restartedMain] o.s.b.w.e.t.TomcatWebServer             :90 : Tomcat initialized with port(s): 8080 (http)
+2019-01-05 22:48:09.745  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.h.Http11NioProtocol               :173 : Initializing ProtocolHandler ["http-nio-8080"]
+2019-01-05 22:48:09.756  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.StandardService                 :173 : Starting service [Tomcat]
+2019-01-05 22:48:09.757  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.StandardEngine                  :173 : Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-01-05 22:48:09.766  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.AprLifecycleListener            :173 : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_77\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Intel\iCLS Client\;C:\PROGRAMDATA\ORACLE\JAVA\JAVAPATH;C:\PROGRAM FILES\DELL\DW WLAN CARD;C:\PROGRAM FILES\INTEL\ICLS CLIENT\;C:\WINDOWS\SYSTEM32;C:\WINDOWS;C:\WINDOWS\SYSTEM32\WBEM;C:\WINDOWS\SYSTEM32\WINDOWSPOWERSHELL\V1.0\;;C:\PROGRAM FILES (X86)\NVIDIA CORPORATION\PHYSX\COMMON;C:\PROGRAM FILES (X86)\MYSQL\MYSQL FABRIC 1.5 & MYSQL UTILITIES 1.5\;C:\PROGRAM FILES (X86)\MYSQL\MYSQL FABRIC 1.5 & MYSQL UTILITIES 1.5\DOCTRINE EXTENSIONS FOR PHP\;C:\PROGRAM FILES\GIT\CMD;C:\Program Files\Java\jdk1.8.0_77\BIN;D:\PROGRAM FILES\TORTOISESVN\BIN;D:\soft\apache-maven-3.3.9\BIN;D:\soft\gradle-2.14.1\BIN;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files\nodejs\;C:\WINDOWS\system32\config\systemprofile\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;d:\Program Files (x86)\Microsoft VS Code\bin;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Users\hu\AppData\Local\.meteor\;C:\Users\hu\AppData\Roaming\npm;C:\Users\hu\AppData\Local\Microsoft\WindowsApps;d:\Program Files (x86)\Microsoft VS Code\bin;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;;.]
+2019-01-05 22:48:09.921  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.C.[.[.[/]                       :173 : Initializing Spring embedded WebApplicationContext
+2019-01-05 22:48:09.922  INFO DESKTOP-BG11PPK --- [  restartedMain] o.s.w.c.ContextLoader                   :296 : Root WebApplicationContext: initialization completed in 2176 ms
+2019-01-05 22:48:10.156  INFO DESKTOP-BG11PPK --- [  restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure:56 : Init DruidDataSource
+2019-01-05 22:48:10.380  INFO DESKTOP-BG11PPK --- [  restartedMain] c.a.d.p.DruidDataSource                 :930 : {dataSource-1} inited
+2019-01-05 22:48:10.600  WARN DESKTOP-BG11PPK --- [  restartedMain] ConfigServletWebServerApplicationContext:554 : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'databaseConfigController': Unsatisfied dependency expressed through field 'baseService'; nested exception is org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type '?' available: expected single matching bean but found 8: databaseConfigServiceImpl,eventBeanServiceImpl,eventFieldServiceImpl,eventGroupServiceImpl,gemfireBeanServiceImpl,gemfireFieldServiceImpl,gemfireIndexServiceImpl,userServiceImpl
+2019-01-05 22:48:10.601  INFO DESKTOP-BG11PPK --- [  restartedMain] c.a.d.p.DruidDataSource                 :1825 : {dataSource-1} closed
+2019-01-05 22:48:10.604  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.StandardService                 :173 : Stopping service [Tomcat]
+2019-01-05 22:48:10.622  INFO DESKTOP-BG11PPK --- [  restartedMain] ConditionEvaluationReportLoggingListener:142 : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-01-05 22:48:10.629 ERROR DESKTOP-BG11PPK --- [  restartedMain] o.s.b.d.LoggingFailureAnalysisReporter  :42 : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field baseService in cn.jsfund.devtools.base.controller.BaseWebController required a single bean, but 8 were found:
+	- databaseConfigServiceImpl: defined in file [D:\hutx\work\devtools\target\classes\cn\jsfund\devtools\service\impl\DatabaseConfigServiceImpl.class]
+	- eventBeanServiceImpl: defined in file [D:\hutx\work\devtools\target\classes\cn\jsfund\devtools\service\impl\EventBeanServiceImpl.class]
+	- eventFieldServiceImpl: defined in file [D:\hutx\work\devtools\target\classes\cn\jsfund\devtools\service\impl\EventFieldServiceImpl.class]
+	- eventGroupServiceImpl: defined in file [D:\hutx\work\devtools\target\classes\cn\jsfund\devtools\service\impl\EventGroupServiceImpl.class]
+	- gemfireBeanServiceImpl: defined in file [D:\hutx\work\devtools\target\classes\cn\jsfund\devtools\service\impl\GemfireBeanServiceImpl.class]
+	- gemfireFieldServiceImpl: defined in file [D:\hutx\work\devtools\target\classes\cn\jsfund\devtools\service\impl\GemfireFieldServiceImpl.class]
+	- gemfireIndexServiceImpl: defined in file [D:\hutx\work\devtools\target\classes\cn\jsfund\devtools\service\impl\GemfireIndexServiceImpl.class]
+	- userServiceImpl: defined in file [D:\hutx\work\devtools\target\classes\cn\jsfund\devtools\service\impl\UserServiceImpl.class]
+
+
+Action:
+
+Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans, or using @Qualifier to identify the bean that should be consumed
+
+2019-01-05 22:52:36.214  INFO DESKTOP-BG11PPK --- [  restartedMain] c.j.d.DevToolsApplication               :50 : Starting DevToolsApplication on DESKTOP-BG11PPK with PID 13812 (D:\hutx\work\devtools\target\classes started by hu in D:\hutx\work\devtools)
+2019-01-05 22:52:36.220 DEBUG DESKTOP-BG11PPK --- [  restartedMain] c.j.d.DevToolsApplication               :53 : Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2019-01-05 22:52:36.221  INFO DESKTOP-BG11PPK --- [  restartedMain] c.j.d.DevToolsApplication               :675 : No active profile set, falling back to default profiles: default
+2019-01-05 22:52:36.275  INFO DESKTOP-BG11PPK --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor:227 : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-01-05 22:52:36.275  INFO DESKTOP-BG11PPK --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor:227 : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-01-05 22:52:37.115  WARN DESKTOP-BG11PPK --- [  restartedMain] o.m.s.m.ClassPathMapperScanner          :166 : No MyBatis mapper was found in '[cn.jsfund.devtools.*.mapper*]' package. Please check your configuration.
+2019-01-05 22:52:37.290  WARN DESKTOP-BG11PPK --- [  restartedMain] o.m.s.m.ClassPathMapperScanner          :166 : No MyBatis mapper was found in '[cn.jsfund.devtools]' package. Please check your configuration.
+2019-01-05 22:52:37.852  INFO DESKTOP-BG11PPK --- [  restartedMain] trationDelegate$BeanPostProcessorChecker:330 : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$70ae0b02] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-05 22:52:38.309  INFO DESKTOP-BG11PPK --- [  restartedMain] o.s.b.w.e.t.TomcatWebServer             :90 : Tomcat initialized with port(s): 8080 (http)
+2019-01-05 22:52:38.322  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.h.Http11NioProtocol               :173 : Initializing ProtocolHandler ["http-nio-8080"]
+2019-01-05 22:52:38.333  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.StandardService                 :173 : Starting service [Tomcat]
+2019-01-05 22:52:38.334  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.StandardEngine                  :173 : Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-01-05 22:52:38.408  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.AprLifecycleListener            :173 : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_77\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Intel\iCLS Client\;C:\PROGRAMDATA\ORACLE\JAVA\JAVAPATH;C:\PROGRAM FILES\DELL\DW WLAN CARD;C:\PROGRAM FILES\INTEL\ICLS CLIENT\;C:\WINDOWS\SYSTEM32;C:\WINDOWS;C:\WINDOWS\SYSTEM32\WBEM;C:\WINDOWS\SYSTEM32\WINDOWSPOWERSHELL\V1.0\;;C:\PROGRAM FILES (X86)\NVIDIA CORPORATION\PHYSX\COMMON;C:\PROGRAM FILES (X86)\MYSQL\MYSQL FABRIC 1.5 & MYSQL UTILITIES 1.5\;C:\PROGRAM FILES (X86)\MYSQL\MYSQL FABRIC 1.5 & MYSQL UTILITIES 1.5\DOCTRINE EXTENSIONS FOR PHP\;C:\PROGRAM FILES\GIT\CMD;C:\Program Files\Java\jdk1.8.0_77\BIN;D:\PROGRAM FILES\TORTOISESVN\BIN;D:\soft\apache-maven-3.3.9\BIN;D:\soft\gradle-2.14.1\BIN;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files\nodejs\;C:\WINDOWS\system32\config\systemprofile\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;d:\Program Files (x86)\Microsoft VS Code\bin;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Users\hu\AppData\Local\.meteor\;C:\Users\hu\AppData\Roaming\npm;C:\Users\hu\AppData\Local\Microsoft\WindowsApps;d:\Program Files (x86)\Microsoft VS Code\bin;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;;.]
+2019-01-05 22:52:38.568  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.C.[.[.[/]                       :173 : Initializing Spring embedded WebApplicationContext
+2019-01-05 22:52:38.569  INFO DESKTOP-BG11PPK --- [  restartedMain] o.s.w.c.ContextLoader                   :296 : Root WebApplicationContext: initialization completed in 2293 ms
+2019-01-05 22:52:38.790  INFO DESKTOP-BG11PPK --- [  restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure:56 : Init DruidDataSource
+2019-01-05 22:52:39.015  INFO DESKTOP-BG11PPK --- [  restartedMain] c.a.d.p.DruidDataSource                 :930 : {dataSource-1} inited
+2019-01-05 22:52:39.252  WARN DESKTOP-BG11PPK --- [  restartedMain] ConfigServletWebServerApplicationContext:554 : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'databaseConfigController': Unsatisfied dependency expressed through field 'baseService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'databaseConfigServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.jsfund.devtools.mapper.DatabaseConfigMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2019-01-05 22:52:39.254  INFO DESKTOP-BG11PPK --- [  restartedMain] c.a.d.p.DruidDataSource                 :1825 : {dataSource-1} closed
+2019-01-05 22:52:39.259  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.StandardService                 :173 : Stopping service [Tomcat]
+2019-01-05 22:52:39.275  INFO DESKTOP-BG11PPK --- [  restartedMain] ConditionEvaluationReportLoggingListener:142 : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-01-05 22:52:39.472 ERROR DESKTOP-BG11PPK --- [  restartedMain] o.s.b.SpringApplication                 :858 : Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'databaseConfigController': Unsatisfied dependency expressed through field 'baseService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'databaseConfigServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.jsfund.devtools.mapper.DatabaseConfigMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1378)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:575)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:846)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:863)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at cn.jsfund.devtools.DevToolsApplication.main(DevToolsApplication.java:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'databaseConfigServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.jsfund.devtools.mapper.DatabaseConfigMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1378)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:575)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:273)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1237)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1164)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	... 24 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.jsfund.devtools.mapper.DatabaseConfigMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1644)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1203)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1164)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	... 37 more
+2019-01-05 23:03:02.908  INFO DESKTOP-BG11PPK --- [  restartedMain] c.j.d.DevToolsApplication               :50 : Starting DevToolsApplication on DESKTOP-BG11PPK with PID 8856 (D:\hutx\work\devtools\target\classes started by hu in D:\hutx\work\devtools)
+2019-01-05 23:03:02.915 DEBUG DESKTOP-BG11PPK --- [  restartedMain] c.j.d.DevToolsApplication               :53 : Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2019-01-05 23:03:02.916  INFO DESKTOP-BG11PPK --- [  restartedMain] c.j.d.DevToolsApplication               :675 : No active profile set, falling back to default profiles: default
+2019-01-05 23:03:02.971  INFO DESKTOP-BG11PPK --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor:227 : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-01-05 23:03:02.972  INFO DESKTOP-BG11PPK --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor:227 : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-01-05 23:03:03.736  WARN DESKTOP-BG11PPK --- [  restartedMain] o.m.s.m.ClassPathMapperScanner          :166 : No MyBatis mapper was found in '[cn.jsfund.devtools.*.mapper*]' package. Please check your configuration.
+2019-01-05 23:03:03.889  WARN DESKTOP-BG11PPK --- [  restartedMain] o.m.s.m.ClassPathMapperScanner          :166 : No MyBatis mapper was found in '[cn.jsfund.devtools]' package. Please check your configuration.
+2019-01-05 23:03:04.484  INFO DESKTOP-BG11PPK --- [  restartedMain] trationDelegate$BeanPostProcessorChecker:330 : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f12239c2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-05 23:03:05.067  INFO DESKTOP-BG11PPK --- [  restartedMain] o.s.b.w.e.t.TomcatWebServer             :90 : Tomcat initialized with port(s): 8080 (http)
+2019-01-05 23:03:05.081  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.h.Http11NioProtocol               :173 : Initializing ProtocolHandler ["http-nio-8080"]
+2019-01-05 23:03:05.091  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.StandardService                 :173 : Starting service [Tomcat]
+2019-01-05 23:03:05.092  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.StandardEngine                  :173 : Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-01-05 23:03:05.100  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.AprLifecycleListener            :173 : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_77\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Intel\iCLS Client\;C:\PROGRAMDATA\ORACLE\JAVA\JAVAPATH;C:\PROGRAM FILES\DELL\DW WLAN CARD;C:\PROGRAM FILES\INTEL\ICLS CLIENT\;C:\WINDOWS\SYSTEM32;C:\WINDOWS;C:\WINDOWS\SYSTEM32\WBEM;C:\WINDOWS\SYSTEM32\WINDOWSPOWERSHELL\V1.0\;;C:\PROGRAM FILES (X86)\NVIDIA CORPORATION\PHYSX\COMMON;C:\PROGRAM FILES (X86)\MYSQL\MYSQL FABRIC 1.5 & MYSQL UTILITIES 1.5\;C:\PROGRAM FILES (X86)\MYSQL\MYSQL FABRIC 1.5 & MYSQL UTILITIES 1.5\DOCTRINE EXTENSIONS FOR PHP\;C:\PROGRAM FILES\GIT\CMD;C:\Program Files\Java\jdk1.8.0_77\BIN;D:\PROGRAM FILES\TORTOISESVN\BIN;D:\soft\apache-maven-3.3.9\BIN;D:\soft\gradle-2.14.1\BIN;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files\nodejs\;C:\WINDOWS\system32\config\systemprofile\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;d:\Program Files (x86)\Microsoft VS Code\bin;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Users\hu\AppData\Local\.meteor\;C:\Users\hu\AppData\Roaming\npm;C:\Users\hu\AppData\Local\Microsoft\WindowsApps;d:\Program Files (x86)\Microsoft VS Code\bin;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;;.]
+2019-01-05 23:03:05.260  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.C.[.[.[/]                       :173 : Initializing Spring embedded WebApplicationContext
+2019-01-05 23:03:05.261  INFO DESKTOP-BG11PPK --- [  restartedMain] o.s.w.c.ContextLoader                   :296 : Root WebApplicationContext: initialization completed in 2289 ms
+2019-01-05 23:03:05.497  INFO DESKTOP-BG11PPK --- [  restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure:56 : Init DruidDataSource
+2019-01-05 23:03:05.724  INFO DESKTOP-BG11PPK --- [  restartedMain] c.a.d.p.DruidDataSource                 :930 : {dataSource-1} inited
+2019-01-05 23:03:05.971  WARN DESKTOP-BG11PPK --- [  restartedMain] ConfigServletWebServerApplicationContext:554 : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'databaseConfigController': Unsatisfied dependency expressed through field 'baseService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'databaseConfigServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.jsfund.devtools.mapper.DatabaseConfigMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2019-01-05 23:03:05.973  INFO DESKTOP-BG11PPK --- [  restartedMain] c.a.d.p.DruidDataSource                 :1825 : {dataSource-1} closed
+2019-01-05 23:03:05.979  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.StandardService                 :173 : Stopping service [Tomcat]
+2019-01-05 23:03:05.997  INFO DESKTOP-BG11PPK --- [  restartedMain] ConditionEvaluationReportLoggingListener:142 : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-01-05 23:03:06.183 ERROR DESKTOP-BG11PPK --- [  restartedMain] o.s.b.SpringApplication                 :858 : Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'databaseConfigController': Unsatisfied dependency expressed through field 'baseService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'databaseConfigServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.jsfund.devtools.mapper.DatabaseConfigMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1378)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:575)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:846)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:863)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at cn.jsfund.devtools.DevToolsApplication.main(DevToolsApplication.java:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'databaseConfigServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.jsfund.devtools.mapper.DatabaseConfigMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1378)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:575)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:273)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1237)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1164)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	... 24 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.jsfund.devtools.mapper.DatabaseConfigMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1644)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1203)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1164)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	... 37 more
+2019-01-05 23:05:48.444  INFO DESKTOP-BG11PPK --- [  restartedMain] c.j.d.DevToolsApplication               :50 : Starting DevToolsApplication on DESKTOP-BG11PPK with PID 16284 (D:\hutx\work\devtools\target\classes started by hu in D:\hutx\work\devtools)
+2019-01-05 23:05:48.451 DEBUG DESKTOP-BG11PPK --- [  restartedMain] c.j.d.DevToolsApplication               :53 : Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2019-01-05 23:05:48.452  INFO DESKTOP-BG11PPK --- [  restartedMain] c.j.d.DevToolsApplication               :675 : No active profile set, falling back to default profiles: default
+2019-01-05 23:05:48.506  INFO DESKTOP-BG11PPK --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor:227 : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-01-05 23:05:48.507  INFO DESKTOP-BG11PPK --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor:227 : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-01-05 23:05:49.246  WARN DESKTOP-BG11PPK --- [  restartedMain] o.m.s.m.ClassPathMapperScanner          :166 : No MyBatis mapper was found in '[cn.jsfund.devtools.*.mapper*]' package. Please check your configuration.
+2019-01-05 23:05:49.396  WARN DESKTOP-BG11PPK --- [  restartedMain] o.m.s.m.ClassPathMapperScanner          :166 : No MyBatis mapper was found in '[cn.jsfund.devtools]' package. Please check your configuration.
+2019-01-05 23:05:50.056  INFO DESKTOP-BG11PPK --- [  restartedMain] trationDelegate$BeanPostProcessorChecker:330 : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e8978ec3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-05 23:05:50.622  INFO DESKTOP-BG11PPK --- [  restartedMain] o.s.b.w.e.t.TomcatWebServer             :90 : Tomcat initialized with port(s): 8080 (http)
+2019-01-05 23:05:50.638  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.h.Http11NioProtocol               :173 : Initializing ProtocolHandler ["http-nio-8080"]
+2019-01-05 23:05:50.647  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.StandardService                 :173 : Starting service [Tomcat]
+2019-01-05 23:05:50.648  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.StandardEngine                  :173 : Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-01-05 23:05:50.657  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.AprLifecycleListener            :173 : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_77\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Intel\iCLS Client\;C:\PROGRAMDATA\ORACLE\JAVA\JAVAPATH;C:\PROGRAM FILES\DELL\DW WLAN CARD;C:\PROGRAM FILES\INTEL\ICLS CLIENT\;C:\WINDOWS\SYSTEM32;C:\WINDOWS;C:\WINDOWS\SYSTEM32\WBEM;C:\WINDOWS\SYSTEM32\WINDOWSPOWERSHELL\V1.0\;;C:\PROGRAM FILES (X86)\NVIDIA CORPORATION\PHYSX\COMMON;C:\PROGRAM FILES (X86)\MYSQL\MYSQL FABRIC 1.5 & MYSQL UTILITIES 1.5\;C:\PROGRAM FILES (X86)\MYSQL\MYSQL FABRIC 1.5 & MYSQL UTILITIES 1.5\DOCTRINE EXTENSIONS FOR PHP\;C:\PROGRAM FILES\GIT\CMD;C:\Program Files\Java\jdk1.8.0_77\BIN;D:\PROGRAM FILES\TORTOISESVN\BIN;D:\soft\apache-maven-3.3.9\BIN;D:\soft\gradle-2.14.1\BIN;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files\nodejs\;C:\WINDOWS\system32\config\systemprofile\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;d:\Program Files (x86)\Microsoft VS Code\bin;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Users\hu\AppData\Local\.meteor\;C:\Users\hu\AppData\Roaming\npm;C:\Users\hu\AppData\Local\Microsoft\WindowsApps;d:\Program Files (x86)\Microsoft VS Code\bin;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;;.]
+2019-01-05 23:05:50.817  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.C.[.[.[/]                       :173 : Initializing Spring embedded WebApplicationContext
+2019-01-05 23:05:50.818  INFO DESKTOP-BG11PPK --- [  restartedMain] o.s.w.c.ContextLoader                   :296 : Root WebApplicationContext: initialization completed in 2311 ms
+2019-01-05 23:05:51.047  INFO DESKTOP-BG11PPK --- [  restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure:56 : Init DruidDataSource
+2019-01-05 23:05:51.283  INFO DESKTOP-BG11PPK --- [  restartedMain] c.a.d.p.DruidDataSource                 :930 : {dataSource-1} inited
+2019-01-05 23:09:37.313  WARN DESKTOP-BG11PPK --- [  restartedMain] ConfigServletWebServerApplicationContext:554 : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'databaseConfigController': Unsatisfied dependency expressed through field 'baseService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'databaseConfigServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.jsfund.devtools.mapper.DatabaseConfigMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2019-01-05 23:09:37.315  INFO DESKTOP-BG11PPK --- [  restartedMain] c.a.d.p.DruidDataSource                 :1825 : {dataSource-1} closed
+2019-01-05 23:09:37.319  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.StandardService                 :173 : Stopping service [Tomcat]
+2019-01-05 23:10:30.104  INFO DESKTOP-BG11PPK --- [  restartedMain] c.j.d.DevToolsApplication               :50 : Starting DevToolsApplication on DESKTOP-BG11PPK with PID 15300 (D:\hutx\work\devtools\target\classes started by hu in D:\hutx\work\devtools)
+2019-01-05 23:10:30.112 DEBUG DESKTOP-BG11PPK --- [  restartedMain] c.j.d.DevToolsApplication               :53 : Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2019-01-05 23:10:30.113  INFO DESKTOP-BG11PPK --- [  restartedMain] c.j.d.DevToolsApplication               :675 : No active profile set, falling back to default profiles: default
+2019-01-05 23:10:30.176  INFO DESKTOP-BG11PPK --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor:227 : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-01-05 23:10:30.176  INFO DESKTOP-BG11PPK --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor:227 : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-01-05 23:10:30.923  WARN DESKTOP-BG11PPK --- [  restartedMain] o.m.s.m.ClassPathMapperScanner          :166 : No MyBatis mapper was found in '[cn.jsfund.devtools.*.mapper*]' package. Please check your configuration.
+2019-01-05 23:10:31.089  WARN DESKTOP-BG11PPK --- [  restartedMain] o.m.s.m.ClassPathMapperScanner          :166 : No MyBatis mapper was found in '[cn.jsfund.devtools]' package. Please check your configuration.
+2019-01-05 23:10:31.682  INFO DESKTOP-BG11PPK --- [  restartedMain] trationDelegate$BeanPostProcessorChecker:330 : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$def7c5b5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-05 23:10:32.248  INFO DESKTOP-BG11PPK --- [  restartedMain] o.s.b.w.e.t.TomcatWebServer             :90 : Tomcat initialized with port(s): 8080 (http)
+2019-01-05 23:10:32.266  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.h.Http11NioProtocol               :173 : Initializing ProtocolHandler ["http-nio-8080"]
+2019-01-05 23:10:32.275  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.StandardService                 :173 : Starting service [Tomcat]
+2019-01-05 23:10:32.276  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.StandardEngine                  :173 : Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-01-05 23:10:32.285  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.AprLifecycleListener            :173 : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_77\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Intel\iCLS Client\;C:\PROGRAMDATA\ORACLE\JAVA\JAVAPATH;C:\PROGRAM FILES\DELL\DW WLAN CARD;C:\PROGRAM FILES\INTEL\ICLS CLIENT\;C:\WINDOWS\SYSTEM32;C:\WINDOWS;C:\WINDOWS\SYSTEM32\WBEM;C:\WINDOWS\SYSTEM32\WINDOWSPOWERSHELL\V1.0\;;C:\PROGRAM FILES (X86)\NVIDIA CORPORATION\PHYSX\COMMON;C:\PROGRAM FILES (X86)\MYSQL\MYSQL FABRIC 1.5 & MYSQL UTILITIES 1.5\;C:\PROGRAM FILES (X86)\MYSQL\MYSQL FABRIC 1.5 & MYSQL UTILITIES 1.5\DOCTRINE EXTENSIONS FOR PHP\;C:\PROGRAM FILES\GIT\CMD;C:\Program Files\Java\jdk1.8.0_77\BIN;D:\PROGRAM FILES\TORTOISESVN\BIN;D:\soft\apache-maven-3.3.9\BIN;D:\soft\gradle-2.14.1\BIN;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files\nodejs\;C:\WINDOWS\system32\config\systemprofile\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;d:\Program Files (x86)\Microsoft VS Code\bin;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Users\hu\AppData\Local\.meteor\;C:\Users\hu\AppData\Roaming\npm;C:\Users\hu\AppData\Local\Microsoft\WindowsApps;d:\Program Files (x86)\Microsoft VS Code\bin;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;;.]
+2019-01-05 23:10:32.441  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.C.[.[.[/]                       :173 : Initializing Spring embedded WebApplicationContext
+2019-01-05 23:10:32.441  INFO DESKTOP-BG11PPK --- [  restartedMain] o.s.w.c.ContextLoader                   :296 : Root WebApplicationContext: initialization completed in 2264 ms
+2019-01-05 23:10:32.680  INFO DESKTOP-BG11PPK --- [  restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure:56 : Init DruidDataSource
+2019-01-05 23:10:32.910  INFO DESKTOP-BG11PPK --- [  restartedMain] c.a.d.p.DruidDataSource                 :930 : {dataSource-1} inited
+2019-01-05 23:10:56.295  WARN DESKTOP-BG11PPK --- [  restartedMain] ConfigServletWebServerApplicationContext:554 : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'databaseConfigController': Unsatisfied dependency expressed through field 'iService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'databaseConfigServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.jsfund.devtools.mapper.DatabaseConfigMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2019-01-05 23:10:56.300  INFO DESKTOP-BG11PPK --- [  restartedMain] c.a.d.p.DruidDataSource                 :1825 : {dataSource-1} closed
+2019-01-05 23:10:56.330  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.StandardService                 :173 : Stopping service [Tomcat]
+2019-01-05 23:10:56.524  INFO DESKTOP-BG11PPK --- [  restartedMain] ConditionEvaluationReportLoggingListener:142 : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-01-05 23:10:58.119 ERROR DESKTOP-BG11PPK --- [  restartedMain] o.s.b.SpringApplication                 :858 : Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'databaseConfigController': Unsatisfied dependency expressed through field 'iService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'databaseConfigServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.jsfund.devtools.mapper.DatabaseConfigMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1378)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:575)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:846)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:863)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at cn.jsfund.devtools.DevToolsApplication.main(DevToolsApplication.java:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'databaseConfigServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.jsfund.devtools.mapper.DatabaseConfigMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1378)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:575)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:273)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1237)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1164)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	... 24 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.jsfund.devtools.mapper.DatabaseConfigMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1644)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1203)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1164)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	... 37 more
+2019-01-05 23:17:09.330  INFO DESKTOP-BG11PPK --- [  restartedMain] c.j.d.DevToolsApplication               :50 : Starting DevToolsApplication on DESKTOP-BG11PPK with PID 11096 (D:\hutx\work\devtools\target\classes started by hu in D:\hutx\work\devtools)
+2019-01-05 23:17:09.337 DEBUG DESKTOP-BG11PPK --- [  restartedMain] c.j.d.DevToolsApplication               :53 : Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2019-01-05 23:17:09.338  INFO DESKTOP-BG11PPK --- [  restartedMain] c.j.d.DevToolsApplication               :675 : No active profile set, falling back to default profiles: default
+2019-01-05 23:17:09.388  INFO DESKTOP-BG11PPK --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor:227 : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-01-05 23:17:09.388  INFO DESKTOP-BG11PPK --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor:227 : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-01-05 23:17:10.128  WARN DESKTOP-BG11PPK --- [  restartedMain] o.m.s.m.ClassPathMapperScanner          :166 : No MyBatis mapper was found in '[cn.jsfund.devtools.*.mapper*]' package. Please check your configuration.
+2019-01-05 23:17:10.306  WARN DESKTOP-BG11PPK --- [  restartedMain] o.m.s.m.ClassPathMapperScanner          :166 : No MyBatis mapper was found in '[cn.jsfund.devtools]' package. Please check your configuration.
+2019-01-05 23:17:10.834  INFO DESKTOP-BG11PPK --- [  restartedMain] trationDelegate$BeanPostProcessorChecker:330 : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$cf606fbc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-05 23:17:11.278  INFO DESKTOP-BG11PPK --- [  restartedMain] o.s.b.w.e.t.TomcatWebServer             :90 : Tomcat initialized with port(s): 8080 (http)
+2019-01-05 23:17:11.291  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.h.Http11NioProtocol               :173 : Initializing ProtocolHandler ["http-nio-8080"]
+2019-01-05 23:17:11.300  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.StandardService                 :173 : Starting service [Tomcat]
+2019-01-05 23:17:11.301  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.StandardEngine                  :173 : Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-01-05 23:17:11.370  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.AprLifecycleListener            :173 : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_77\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Intel\iCLS Client\;C:\PROGRAMDATA\ORACLE\JAVA\JAVAPATH;C:\PROGRAM FILES\DELL\DW WLAN CARD;C:\PROGRAM FILES\INTEL\ICLS CLIENT\;C:\WINDOWS\SYSTEM32;C:\WINDOWS;C:\WINDOWS\SYSTEM32\WBEM;C:\WINDOWS\SYSTEM32\WINDOWSPOWERSHELL\V1.0\;;C:\PROGRAM FILES (X86)\NVIDIA CORPORATION\PHYSX\COMMON;C:\PROGRAM FILES (X86)\MYSQL\MYSQL FABRIC 1.5 & MYSQL UTILITIES 1.5\;C:\PROGRAM FILES (X86)\MYSQL\MYSQL FABRIC 1.5 & MYSQL UTILITIES 1.5\DOCTRINE EXTENSIONS FOR PHP\;C:\PROGRAM FILES\GIT\CMD;C:\Program Files\Java\jdk1.8.0_77\BIN;D:\PROGRAM FILES\TORTOISESVN\BIN;D:\soft\apache-maven-3.3.9\BIN;D:\soft\gradle-2.14.1\BIN;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files\nodejs\;C:\WINDOWS\system32\config\systemprofile\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;d:\Program Files (x86)\Microsoft VS Code\bin;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Users\hu\AppData\Local\.meteor\;C:\Users\hu\AppData\Roaming\npm;C:\Users\hu\AppData\Local\Microsoft\WindowsApps;d:\Program Files (x86)\Microsoft VS Code\bin;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;;.]
+2019-01-05 23:17:11.525  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.C.[.[.[/]                       :173 : Initializing Spring embedded WebApplicationContext
+2019-01-05 23:17:11.526  INFO DESKTOP-BG11PPK --- [  restartedMain] o.s.w.c.ContextLoader                   :296 : Root WebApplicationContext: initialization completed in 2137 ms
+2019-01-05 23:17:11.759  INFO DESKTOP-BG11PPK --- [  restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure:56 : Init DruidDataSource
+2019-01-05 23:17:11.976  INFO DESKTOP-BG11PPK --- [  restartedMain] c.a.d.p.DruidDataSource                 :930 : {dataSource-1} inited
+2019-01-05 23:17:25.738  WARN DESKTOP-BG11PPK --- [  restartedMain] ConfigServletWebServerApplicationContext:554 : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'databaseConfigController': Unsatisfied dependency expressed through field 'iService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'databaseConfigServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.jsfund.devtools.mapper.DatabaseConfigMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2019-01-05 23:17:25.744  INFO DESKTOP-BG11PPK --- [  restartedMain] c.a.d.p.DruidDataSource                 :1825 : {dataSource-1} closed
+2019-01-05 23:17:25.773  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.StandardService                 :173 : Stopping service [Tomcat]
+2019-01-05 23:17:25.963  INFO DESKTOP-BG11PPK --- [  restartedMain] ConditionEvaluationReportLoggingListener:142 : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-01-05 23:17:27.619 ERROR DESKTOP-BG11PPK --- [  restartedMain] o.s.b.SpringApplication                 :858 : Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'databaseConfigController': Unsatisfied dependency expressed through field 'iService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'databaseConfigServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.jsfund.devtools.mapper.DatabaseConfigMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1378)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:575)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:846)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:863)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at cn.jsfund.devtools.DevToolsApplication.main(DevToolsApplication.java:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'databaseConfigServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.jsfund.devtools.mapper.DatabaseConfigMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1378)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:575)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:273)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1237)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1164)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	... 24 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.jsfund.devtools.mapper.DatabaseConfigMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1644)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1203)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1164)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	... 37 more
+2019-01-05 23:22:29.015  INFO DESKTOP-BG11PPK --- [  restartedMain] c.j.d.DevToolsApplication               :50 : Starting DevToolsApplication on DESKTOP-BG11PPK with PID 17292 (D:\hutx\work\devtools\target\classes started by hu in D:\hutx\work\devtools)
+2019-01-05 23:22:29.022 DEBUG DESKTOP-BG11PPK --- [  restartedMain] c.j.d.DevToolsApplication               :53 : Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2019-01-05 23:22:29.023  INFO DESKTOP-BG11PPK --- [  restartedMain] c.j.d.DevToolsApplication               :675 : No active profile set, falling back to default profiles: default
+2019-01-05 23:22:29.066  INFO DESKTOP-BG11PPK --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor:227 : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-01-05 23:22:29.067  INFO DESKTOP-BG11PPK --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor:227 : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-01-05 23:22:29.848  WARN DESKTOP-BG11PPK --- [  restartedMain] o.m.s.m.ClassPathMapperScanner          :166 : No MyBatis mapper was found in '[cn.jsfund.devtools.*.mapper*]' package. Please check your configuration.
+2019-01-05 23:22:29.986  WARN DESKTOP-BG11PPK --- [  restartedMain] o.m.s.m.ClassPathMapperScanner          :166 : No MyBatis mapper was found in '[cn.jsfund.devtools]' package. Please check your configuration.
+2019-01-05 23:22:30.555  INFO DESKTOP-BG11PPK --- [  restartedMain] trationDelegate$BeanPostProcessorChecker:330 : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3f12f061] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-05 23:22:31.083  INFO DESKTOP-BG11PPK --- [  restartedMain] o.s.b.w.e.t.TomcatWebServer             :90 : Tomcat initialized with port(s): 8080 (http)
+2019-01-05 23:22:31.097  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.h.Http11NioProtocol               :173 : Initializing ProtocolHandler ["http-nio-8080"]
+2019-01-05 23:22:31.106  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.StandardService                 :173 : Starting service [Tomcat]
+2019-01-05 23:22:31.107  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.StandardEngine                  :173 : Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-01-05 23:22:31.115  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.AprLifecycleListener            :173 : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_77\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Intel\iCLS Client\;C:\PROGRAMDATA\ORACLE\JAVA\JAVAPATH;C:\PROGRAM FILES\DELL\DW WLAN CARD;C:\PROGRAM FILES\INTEL\ICLS CLIENT\;C:\WINDOWS\SYSTEM32;C:\WINDOWS;C:\WINDOWS\SYSTEM32\WBEM;C:\WINDOWS\SYSTEM32\WINDOWSPOWERSHELL\V1.0\;;C:\PROGRAM FILES (X86)\NVIDIA CORPORATION\PHYSX\COMMON;C:\PROGRAM FILES (X86)\MYSQL\MYSQL FABRIC 1.5 & MYSQL UTILITIES 1.5\;C:\PROGRAM FILES (X86)\MYSQL\MYSQL FABRIC 1.5 & MYSQL UTILITIES 1.5\DOCTRINE EXTENSIONS FOR PHP\;C:\PROGRAM FILES\GIT\CMD;C:\Program Files\Java\jdk1.8.0_77\BIN;D:\PROGRAM FILES\TORTOISESVN\BIN;D:\soft\apache-maven-3.3.9\BIN;D:\soft\gradle-2.14.1\BIN;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files\nodejs\;C:\WINDOWS\system32\config\systemprofile\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;d:\Program Files (x86)\Microsoft VS Code\bin;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Users\hu\AppData\Local\.meteor\;C:\Users\hu\AppData\Roaming\npm;C:\Users\hu\AppData\Local\Microsoft\WindowsApps;d:\Program Files (x86)\Microsoft VS Code\bin;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;;.]
+2019-01-05 23:22:31.268  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.C.[.[.[/]                       :173 : Initializing Spring embedded WebApplicationContext
+2019-01-05 23:22:31.269  INFO DESKTOP-BG11PPK --- [  restartedMain] o.s.w.c.ContextLoader                   :296 : Root WebApplicationContext: initialization completed in 2202 ms
+2019-01-05 23:22:31.509  INFO DESKTOP-BG11PPK --- [  restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure:56 : Init DruidDataSource
+2019-01-05 23:22:31.735  INFO DESKTOP-BG11PPK --- [  restartedMain] c.a.d.p.DruidDataSource                 :930 : {dataSource-1} inited
+2019-01-05 23:23:24.295  WARN DESKTOP-BG11PPK --- [  restartedMain] ConfigServletWebServerApplicationContext:554 : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'databaseConfigController': Unsatisfied dependency expressed through field 'iService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'databaseConfigServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.jsfund.devtools.mapper.DatabaseConfigMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2019-01-05 23:23:24.302  INFO DESKTOP-BG11PPK --- [  restartedMain] c.a.d.p.DruidDataSource                 :1825 : {dataSource-1} closed
+2019-01-05 23:23:24.336  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.StandardService                 :173 : Stopping service [Tomcat]
+2019-01-05 23:23:24.532  INFO DESKTOP-BG11PPK --- [  restartedMain] ConditionEvaluationReportLoggingListener:142 : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-01-05 23:23:26.309 ERROR DESKTOP-BG11PPK --- [  restartedMain] o.s.b.SpringApplication                 :858 : Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'databaseConfigController': Unsatisfied dependency expressed through field 'iService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'databaseConfigServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.jsfund.devtools.mapper.DatabaseConfigMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1378)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:575)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:846)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:863)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at cn.jsfund.devtools.DevToolsApplication.main(DevToolsApplication.java:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'databaseConfigServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.jsfund.devtools.mapper.DatabaseConfigMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1378)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:575)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:273)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1237)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1164)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	... 24 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.jsfund.devtools.mapper.DatabaseConfigMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1644)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1203)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1164)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	... 37 more
+2019-01-05 23:34:47.981  INFO DESKTOP-BG11PPK --- [  restartedMain] c.j.d.DevToolsApplication               :50 : Starting DevToolsApplication on DESKTOP-BG11PPK with PID 5240 (D:\hutx\work\devtools\target\classes started by hu in D:\hutx\work\devtools)
+2019-01-05 23:34:47.989 DEBUG DESKTOP-BG11PPK --- [  restartedMain] c.j.d.DevToolsApplication               :53 : Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2019-01-05 23:34:47.991  INFO DESKTOP-BG11PPK --- [  restartedMain] c.j.d.DevToolsApplication               :675 : No active profile set, falling back to default profiles: default
+2019-01-05 23:34:48.080  INFO DESKTOP-BG11PPK --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor:227 : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-01-05 23:34:48.080  INFO DESKTOP-BG11PPK --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor:227 : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-01-05 23:34:48.842  WARN DESKTOP-BG11PPK --- [  restartedMain] o.m.s.m.ClassPathMapperScanner          :166 : No MyBatis mapper was found in '[cn.jsfund.devtools.*.mapper*]' package. Please check your configuration.
+2019-01-05 23:34:48.993  WARN DESKTOP-BG11PPK --- [  restartedMain] o.m.s.m.ClassPathMapperScanner          :166 : No MyBatis mapper was found in '[cn.jsfund.devtools]' package. Please check your configuration.
+2019-01-05 23:34:49.556  INFO DESKTOP-BG11PPK --- [  restartedMain] trationDelegate$BeanPostProcessorChecker:330 : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6c8cfad8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-05 23:34:50.038  INFO DESKTOP-BG11PPK --- [  restartedMain] o.s.b.w.e.t.TomcatWebServer             :90 : Tomcat initialized with port(s): 8080 (http)
+2019-01-05 23:34:50.052  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.h.Http11NioProtocol               :173 : Initializing ProtocolHandler ["http-nio-8080"]
+2019-01-05 23:34:50.061  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.StandardService                 :173 : Starting service [Tomcat]
+2019-01-05 23:34:50.062  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.StandardEngine                  :173 : Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-01-05 23:34:50.147  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.AprLifecycleListener            :173 : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_77\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Intel\iCLS Client\;C:\PROGRAMDATA\ORACLE\JAVA\JAVAPATH;C:\PROGRAM FILES\DELL\DW WLAN CARD;C:\PROGRAM FILES\INTEL\ICLS CLIENT\;C:\WINDOWS\SYSTEM32;C:\WINDOWS;C:\WINDOWS\SYSTEM32\WBEM;C:\WINDOWS\SYSTEM32\WINDOWSPOWERSHELL\V1.0\;;C:\PROGRAM FILES (X86)\NVIDIA CORPORATION\PHYSX\COMMON;C:\PROGRAM FILES (X86)\MYSQL\MYSQL FABRIC 1.5 & MYSQL UTILITIES 1.5\;C:\PROGRAM FILES (X86)\MYSQL\MYSQL FABRIC 1.5 & MYSQL UTILITIES 1.5\DOCTRINE EXTENSIONS FOR PHP\;C:\PROGRAM FILES\GIT\CMD;C:\Program Files\Java\jdk1.8.0_77\BIN;D:\PROGRAM FILES\TORTOISESVN\BIN;D:\soft\apache-maven-3.3.9\BIN;D:\soft\gradle-2.14.1\BIN;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files\nodejs\;C:\WINDOWS\system32\config\systemprofile\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;d:\Program Files (x86)\Microsoft VS Code\bin;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Users\hu\AppData\Local\.meteor\;C:\Users\hu\AppData\Roaming\npm;C:\Users\hu\AppData\Local\Microsoft\WindowsApps;d:\Program Files (x86)\Microsoft VS Code\bin;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;;.]
+2019-01-05 23:34:50.315  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.C.[.[.[/]                       :173 : Initializing Spring embedded WebApplicationContext
+2019-01-05 23:34:50.316  INFO DESKTOP-BG11PPK --- [  restartedMain] o.s.w.c.ContextLoader                   :296 : Root WebApplicationContext: initialization completed in 2236 ms
+2019-01-05 23:34:50.540  INFO DESKTOP-BG11PPK --- [  restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure:56 : Init DruidDataSource
+2019-01-05 23:34:50.774  INFO DESKTOP-BG11PPK --- [  restartedMain] c.a.d.p.DruidDataSource                 :930 : {dataSource-1} inited
+2019-01-05 23:34:51.010  WARN DESKTOP-BG11PPK --- [  restartedMain] ConfigServletWebServerApplicationContext:554 : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'databaseConfigServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.jsfund.devtools.mapper.DatabaseConfigMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2019-01-05 23:34:51.011  INFO DESKTOP-BG11PPK --- [  restartedMain] c.a.d.p.DruidDataSource                 :1825 : {dataSource-1} closed
+2019-01-05 23:34:51.014  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.StandardService                 :173 : Stopping service [Tomcat]
+2019-01-05 23:34:51.032  INFO DESKTOP-BG11PPK --- [  restartedMain] ConditionEvaluationReportLoggingListener:142 : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-01-05 23:34:51.211 ERROR DESKTOP-BG11PPK --- [  restartedMain] o.s.b.SpringApplication                 :858 : Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'databaseConfigServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.jsfund.devtools.mapper.DatabaseConfigMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1378)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:575)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:846)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:863)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at cn.jsfund.devtools.DevToolsApplication.main(DevToolsApplication.java:12)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.jsfund.devtools.mapper.DatabaseConfigMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1644)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1203)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1164)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	... 24 more
+2019-01-05 23:58:26.116  INFO DESKTOP-BG11PPK --- [  restartedMain] c.j.d.DevToolsApplication               :50 : Starting DevToolsApplication on DESKTOP-BG11PPK with PID 3548 (D:\hutx\work\devtools\target\classes started by hu in D:\hutx\work\devtools)
+2019-01-05 23:58:26.125 DEBUG DESKTOP-BG11PPK --- [  restartedMain] c.j.d.DevToolsApplication               :53 : Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2019-01-05 23:58:26.126  INFO DESKTOP-BG11PPK --- [  restartedMain] c.j.d.DevToolsApplication               :675 : No active profile set, falling back to default profiles: default
+2019-01-05 23:58:26.236  INFO DESKTOP-BG11PPK --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor:227 : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-01-05 23:58:26.237  INFO DESKTOP-BG11PPK --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor:227 : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-01-05 23:58:27.262  WARN DESKTOP-BG11PPK --- [  restartedMain] o.m.s.m.ClassPathMapperScanner          :166 : No MyBatis mapper was found in '[cn.jsfund.devtools.*.mapper*]' package. Please check your configuration.
+2019-01-05 23:58:27.443  WARN DESKTOP-BG11PPK --- [  restartedMain] o.m.s.m.ClassPathMapperScanner          :166 : No MyBatis mapper was found in '[cn.jsfund.devtools]' package. Please check your configuration.
+2019-01-05 23:58:28.029  INFO DESKTOP-BG11PPK --- [  restartedMain] trationDelegate$BeanPostProcessorChecker:330 : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2558b66] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-05 23:58:28.584  INFO DESKTOP-BG11PPK --- [  restartedMain] o.s.b.w.e.t.TomcatWebServer             :90 : Tomcat initialized with port(s): 8080 (http)
+2019-01-05 23:58:28.600  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.h.Http11NioProtocol               :173 : Initializing ProtocolHandler ["http-nio-8080"]
+2019-01-05 23:58:28.694  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.StandardService                 :173 : Starting service [Tomcat]
+2019-01-05 23:58:28.695  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.StandardEngine                  :173 : Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-01-05 23:58:28.708  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.AprLifecycleListener            :173 : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_77\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Intel\iCLS Client\;C:\PROGRAMDATA\ORACLE\JAVA\JAVAPATH;C:\PROGRAM FILES\DELL\DW WLAN CARD;C:\PROGRAM FILES\INTEL\ICLS CLIENT\;C:\WINDOWS\SYSTEM32;C:\WINDOWS;C:\WINDOWS\SYSTEM32\WBEM;C:\WINDOWS\SYSTEM32\WINDOWSPOWERSHELL\V1.0\;;C:\PROGRAM FILES (X86)\NVIDIA CORPORATION\PHYSX\COMMON;C:\PROGRAM FILES (X86)\MYSQL\MYSQL FABRIC 1.5 & MYSQL UTILITIES 1.5\;C:\PROGRAM FILES (X86)\MYSQL\MYSQL FABRIC 1.5 & MYSQL UTILITIES 1.5\DOCTRINE EXTENSIONS FOR PHP\;C:\PROGRAM FILES\GIT\CMD;C:\Program Files\Java\jdk1.8.0_77\BIN;D:\PROGRAM FILES\TORTOISESVN\BIN;D:\soft\apache-maven-3.3.9\BIN;D:\soft\gradle-2.14.1\BIN;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files\nodejs\;C:\WINDOWS\system32\config\systemprofile\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;d:\Program Files (x86)\Microsoft VS Code\bin;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Users\hu\AppData\Local\.meteor\;C:\Users\hu\AppData\Roaming\npm;C:\Users\hu\AppData\Local\Microsoft\WindowsApps;d:\Program Files (x86)\Microsoft VS Code\bin;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;;.]
+2019-01-05 23:58:28.881  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.C.[.[.[/]                       :173 : Initializing Spring embedded WebApplicationContext
+2019-01-05 23:58:28.882  INFO DESKTOP-BG11PPK --- [  restartedMain] o.s.w.c.ContextLoader                   :296 : Root WebApplicationContext: initialization completed in 2645 ms
+2019-01-05 23:58:29.110  INFO DESKTOP-BG11PPK --- [  restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure:56 : Init DruidDataSource
+2019-01-05 23:58:29.360  INFO DESKTOP-BG11PPK --- [  restartedMain] c.a.d.p.DruidDataSource                 :930 : {dataSource-1} inited
+2019-01-05 23:58:29.598  WARN DESKTOP-BG11PPK --- [  restartedMain] ConfigServletWebServerApplicationContext:554 : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'databaseConfigController': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'databaseConfigServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.jsfund.devtools.mapper.DatabaseConfigMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2019-01-05 23:58:29.601  INFO DESKTOP-BG11PPK --- [  restartedMain] c.a.d.p.DruidDataSource                 :1825 : {dataSource-1} closed
+2019-01-05 23:58:29.605  INFO DESKTOP-BG11PPK --- [  restartedMain] o.a.c.c.StandardService                 :173 : Stopping service [Tomcat]
+2019-01-05 23:58:29.624  INFO DESKTOP-BG11PPK --- [  restartedMain] ConditionEvaluationReportLoggingListener:142 : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-01-05 23:58:29.843 ERROR DESKTOP-BG11PPK --- [  restartedMain] o.s.b.SpringApplication                 :858 : Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'databaseConfigController': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'databaseConfigServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.jsfund.devtools.mapper.DatabaseConfigMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1378)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:575)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:846)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:863)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at cn.jsfund.devtools.DevToolsApplication.main(DevToolsApplication.java:12)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'databaseConfigServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.jsfund.devtools.mapper.DatabaseConfigMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1378)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:575)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:273)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1237)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1164)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	... 24 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.jsfund.devtools.mapper.DatabaseConfigMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1644)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1203)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1164)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	... 37 more

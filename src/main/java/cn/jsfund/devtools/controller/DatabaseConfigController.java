@@ -1,25 +1,22 @@
 package cn.jsfund.devtools.controller;
 
-import cn.jsfund.devtools.base.server.BaseService;
-import cn.jsfund.devtools.base.controller.BaseWebController;
-import cn.jsfund.devtools.model.DatabaseConfig;
-import cn.jsfund.devtools.service.DatabaseConfigService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import org.springframework.web.bind.annotation.RestController;
+import cn.jsfund.devtools.base.controller.BaseWebController;
+import cn.jsfund.devtools.service.IDatabaseConfigService;
+import cn.jsfund.devtools.entity.DatabaseConfig;
 /**
- * Created by hutx on 15:37 2018/11/22
+ * <p>
+ * 数据库配置 前端控制器
+ * </p>
+ *
+ * @author hutx
+ * @since 2019-01-13
  */
 @RestController
-@RequestMapping("/api/databaseConfigs")
-public class DatabaseConfigController extends BaseWebController<DatabaseConfig> {
+@RequestMapping("/api/database-config")
+public class DatabaseConfigController extends BaseWebController<IDatabaseConfigService, DatabaseConfig> {
 
-    @Autowired
-    private DatabaseConfigService service;
-
-    @Override
-    public BaseService<DatabaseConfig> getService() {
-        return service;
-    }
 }

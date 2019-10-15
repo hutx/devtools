@@ -1,25 +1,30 @@
 package cn.jsfund.devtools.controller;
 
-import cn.jsfund.devtools.base.server.BaseService;
+
 import cn.jsfund.devtools.base.controller.BaseWebController;
-import cn.jsfund.devtools.model.EventField;
-import cn.jsfund.devtools.service.EventFieldService;
-import org.springframework.beans.factory.annotation.Autowired;
+import cn.jsfund.devtools.entity.EventField;
+import cn.jsfund.devtools.service.IEventFieldService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * Created by hutx on 15:37 2018/11/22
+ * <p>
+ * 前端控制器
+ * </p>
+ *
+ * @author hutx
+ * @since 2019-01-05
  */
 @RestController
-@RequestMapping("/api/eventFields")
-public class EventFieldController extends BaseWebController<EventField> {
+@RequestMapping("event-field")
+public class EventFieldController extends BaseWebController<IEventFieldService, EventField> {
 
-    @Autowired
-    private EventFieldService service;
+//    @Autowired
+//    private IEventFieldService service;
+//
+//    @Override
+//    public IService<EventField> getService() {
+//        return service;
+//    }
 
-    @Override
-    public BaseService<EventField> getService() {
-        return service;
-    }
 }

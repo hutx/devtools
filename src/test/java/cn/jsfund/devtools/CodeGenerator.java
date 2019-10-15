@@ -1,7 +1,6 @@
 package cn.jsfund.devtools;
 
 
-import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.core.toolkit.StringPool;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.generator.AutoGenerator;
@@ -10,8 +9,7 @@ import com.baomidou.mybatisplus.generator.config.*;
 import com.baomidou.mybatisplus.generator.config.po.TableInfo;
 import com.baomidou.mybatisplus.generator.config.rules.DateType;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
-import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
-
+import com.baomidou.mybatisplus.generator.engine.BeetlTemplateEngine;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -34,16 +32,22 @@ public class CodeGenerator {
     private static String MODEL_PATH;
     private static String ENTITY_PATH;
     private static String XML_PATH;
+    private static String MODULE;
+    private static String PACKAGE;
 
     private static String AUTHOR;
 
 
     public static void main(String[] args) {
+        generator();
+    }
+
+    public static void generator() {
         InputStream in = CodeGenerator.class.getResourceAsStream("/mybatis_plus.properties");
         Properties pro = new Properties();
         try {
             pro.load(in);
-            TABLES = pro.getProperty("tables").toUpperCase().split(",");
+            TABLES = pro.getProperty("tables").split(",");//.toUpperCase()
             DRIVER = pro.getProperty("jdbc.driver");
             URL = pro.getProperty("jdbc.url");
             USER = pro.getProperty("jdbc.user");
@@ -53,6 +57,9 @@ public class CodeGenerator {
             MODEL_PATH = pro.getProperty("modelPath");
             ENTITY_PATH = pro.getProperty("javaPath");
             XML_PATH = pro.getProperty("xmlPath");
+            MODULE = pro.getProperty("module");
+            PACKAGE = pro.getProperty("package");
+
             AUTHOR = pro.getProperty("author");
 
         } catch (IOException e) {
@@ -67,6 +74,7 @@ public class CodeGenerator {
         gc.setOutputDir(projectPath);
         gc.setAuthor(StringUtils.isNotEmpty(AUTHOR) ? AUTHOR : System.getProperty("user"));
         gc.setOpen(false);
+        //是否覆盖
         gc.setFileOverride(true);
         gc.setDateType(DateType.ONLY_DATE);
         mpg.setGlobalConfig(gc);
@@ -74,9 +82,9 @@ public class CodeGenerator {
 
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setDbType(DbType.ORACLE);
+//               dsc.setDbType(DbType.MYSQL);
         dsc.setUrl(URL);
-//        dsc.setSchemaName("ims");
+
         dsc.setDriverName(DRIVER);
         dsc.setUsername(USER);
         dsc.setPassword(PASSWORD);
@@ -84,8 +92,10 @@ public class CodeGenerator {
 
         // 包配置
         PackageConfig pc = new PackageConfig();
-        //pc.setModuleName("rtcalc");
-        pc.setParent("cn.jsfund.eda");
+        if (StringUtils.isNotEmpty(MODULE)) {
+            pc.setModuleName(MODULE);
+        }
+        pc.setParent(PACKAGE);
         mpg.setPackageInfo(pc);
 
         // 自定义配置
@@ -97,7 +107,7 @@ public class CodeGenerator {
         };
 
         // 如果模板引擎是 freemarker
-        String templatePath = "/templates/mapper.xml.ftl";
+        String templatePath = "/templates/mapper.xml.btl";
 
 
         // 自定义输出配置
@@ -107,7 +117,8 @@ public class CodeGenerator {
             @Override
             public String outputFile(TableInfo tableInfo) {
                 // 自定义输出文件名
-                return projectPath + "/" + XML_PATH.replaceAll("\\.", "/") + "/"  //"/src/main/java/cn/jsfund/eda/mapper/xml/"
+                String module = StringUtils.isNotEmpty(MODULE) ? "/" + MODULE : "";
+                return projectPath + "/" + PACKAGE.replaceAll("\\.", "/") + module + "/mapper/xml/"  //"/src/main/java/cn/jsfund/eda/"
                         + tableInfo.getEntityName() + "Mapper" + StringPool.DOT_XML;
             }
         });
@@ -121,8 +132,8 @@ public class CodeGenerator {
         // 配置自定义输出模板
         // templateConfig.setEntity();
 //        templateConfig.setService(null);
-        templateConfig.setController(null);
-        templateConfig.setXml(null);
+//        templateConfig.setController(null);
+//        templateConfig.setXml(null);
         mpg.setTemplate(templateConfig);
 
         // 策略配置
@@ -130,16 +141,18 @@ public class CodeGenerator {
         strategy.setNaming(NamingStrategy.underline_to_camel);
         strategy.setColumnNaming(NamingStrategy.underline_to_camel);
         strategy.setEntityColumnConstant(true);
-        strategy.setSuperEntityClass("cn.jsfund.eda.common.BaseEntity");
+        strategy.setSuperEntityClass("cn.jsfund.devtools.base.BaseEntity");
         strategy.setEntityLombokModel(false);
         strategy.setRestControllerStyle(true);
-        strategy.setSuperControllerClass("cn.jsfund.eda.common.BaseController");
+        strategy.setSuperControllerClass("cn.jsfund.devtools.base.controller.BaseWebController");
         strategy.setInclude(TABLES);
+        //serviceClassNameStartWithI
 //        strategy.setSuperEntityColumns("id");
         strategy.setControllerMappingHyphenStyle(true);
         //strategy.setTablePrefix(pc.getModuleName() + "_");
         mpg.setStrategy(strategy);
-        mpg.setTemplateEngine(new FreemarkerTemplateEngine());
+        mpg.setTemplateEngine(new BeetlTemplateEngine());
         mpg.execute();
     }
+
 }

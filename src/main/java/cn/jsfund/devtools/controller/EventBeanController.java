@@ -1,25 +1,30 @@
 package cn.jsfund.devtools.controller;
 
-import cn.jsfund.devtools.base.server.BaseService;
-import cn.jsfund.devtools.service.EventBeanService;
+
 import cn.jsfund.devtools.base.controller.BaseWebController;
-import cn.jsfund.devtools.model.EventBean;
-import org.springframework.beans.factory.annotation.Autowired;
+import cn.jsfund.devtools.entity.EventBean;
+import cn.jsfund.devtools.service.IEventBeanService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * Created by hutx on 15:37 2018/11/22
+ * <p>
+ * 前端控制器
+ * </p>
+ *
+ * @author hutx
+ * @since 2019-01-05
  */
 @RestController
-@RequestMapping("/api/eventBeans")
-public class EventBeanController extends BaseWebController<EventBean> {
+@RequestMapping("event-bean")
+public class EventBeanController extends BaseWebController<IEventBeanService,EventBean> {
 
-    @Autowired
-    private EventBeanService service;
+//    @Autowired
+//    private IEventBeanService service;
+//
+//    @Override
+//    public IService<EventBean> getService() {
+//        return service;
+//    }
 
-    @Override
-    public BaseService<EventBean> getService() {
-        return service;
-    }
 }

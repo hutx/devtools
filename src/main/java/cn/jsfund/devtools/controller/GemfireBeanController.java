@@ -1,45 +1,30 @@
 package cn.jsfund.devtools.controller;
 
-import cn.jsfund.devtools.base.server.BaseService;
-import cn.jsfund.devtools.bean.GemfireBeans;
-import cn.jsfund.devtools.bean.Result;
-import cn.jsfund.devtools.model.GemfireBean;
-import cn.jsfund.devtools.service.GemfireBeanService;
+
 import cn.jsfund.devtools.base.controller.BaseWebController;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import cn.jsfund.devtools.entity.GemfireBean;
+import cn.jsfund.devtools.service.IGemfireBeanService;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
- * Created by hutx on 21:44 2018/11/21
+ * <p>
+ * 前端控制器
+ * </p>
+ *
+ * @author hutx
+ * @since 2019-01-05
  */
 @RestController
-@RequestMapping("/api/gemfireBeans")
-public class GemfireBeanController extends BaseWebController<GemfireBean> {
+@RequestMapping("/api/gemfires")
+public class GemfireBeanController extends BaseWebController<IGemfireBeanService,GemfireBean> {
 
-    @Autowired
-    private GemfireBeanService service;
+//    @Autowired
+//    private IGemfireBeanService service;
+//
+//    @Override
+//    public IService<GemfireBean> getService() {
+//        return service;
+//    }
 
-    @Override
-    public BaseService<GemfireBean> getService() {
-        return service;
-    }
-
-    @RequestMapping("/fieldInfo")
-    public Result fieldInfo(@RequestParam(required = false, defaultValue = "1") Integer classId) {
-        try {
-            return this.successReturn(service.findBeanFieldInfoByClassId(classId));
-        } catch (Exception var4) {
-            return this.successReturn();
-        }
-    }
-
-    @PostMapping("/saveField")
-    public Result addFieldInfo(@RequestBody GemfireBeans beans) {
-        try {
-            service.saveBeanFieldInfo(beans.getClassId(), beans.getFieldList(), beans.getIndexList());
-            return this.successReturn();
-        } catch (Exception var4) {
-            return this.successReturn();
-        }
-    }
 }
