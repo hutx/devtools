@@ -1,4 +1,4 @@
-package cn.jsfund.devtools.config;
+package cn.jsfund.devtools.shiro;
 
 import cn.jsfund.devtools.sys.entity.SysMenu;
 import cn.jsfund.devtools.sys.entity.SysRole;
@@ -32,6 +32,14 @@ public class MyShiroRealm extends AuthorizingRealm {
     @Resource
     private ISysUserService userService;
 
+
+    /**
+     * 必须重写此方法，不然Shiro会报错
+     */
+    @Override
+    public boolean supports(AuthenticationToken token) {
+        return token instanceof JwtToken;
+    }
 
     /**
      * 权限认证

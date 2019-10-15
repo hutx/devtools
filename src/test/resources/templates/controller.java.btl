@@ -19,7 +19,7 @@ import ${package.Entity}.${entity};
  * </p>
  *
  * @author ${author}
- * @since ${date}
+ * @since ${data}
  */
 <% if(restControllerStyle){ %>
 @RestController

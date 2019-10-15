@@ -44,11 +44,8 @@ public class Result {
     // 返回状态信息,默认200
     private int code = 200;
 
-    // 业务异常码,仅定义,暂不开发
-    private String codeDetail = "";
-
     // 返回的数据
-    private Object list = null;
+    private Object data = null;
 
     private Pagination pagination;
 
@@ -58,57 +55,22 @@ public class Result {
     // 异常堆栈
     private String msgDetail = "";
 
-    // 仅定义,暂不开发
-    private String moreInfo = "";
-
     //标识请求的线程id
     private String requestId = "";
 
     public Result() {
-        this(SUCCESS, null, null, null, null, null, null);
+        this(SUCCESS, null, null, null, null);
     }
 
-    public Result(int code, Object list, String msg, String msgDetail, Pagination pagination) {
-        this(code, list, msg, msgDetail, null, null, pagination);
+    public Result(Object date) {
+        this(SUCCESS, date, null, null, null);
     }
 
-
-    public Result(int code, Object list, String msg, String msgDetail) {
-        this(code, list, msg, msgDetail, null, null, null);
-    }
-
-    public Result(int code, Object list, String msg, Exception exception) {
-        this(code, list, msg, getDetailMsg(exception), null, null, null);
-    }
-
-    public Result(int code, Object list, String msg, String msgDetail, String codeDetail, String moreInfo, Pagination pagination) {
+    public Result(int code, Object date, Pagination pagination, String msg, String msgDetail) {
         this.code = code;
-        this.list = list;
+        this.data = date;
         this.msg = msg;
         this.msgDetail = msgDetail;
-        this.codeDetail = codeDetail;
-        this.moreInfo = moreInfo;
-        this.pagination = pagination;
-    }
-
-    public String getCodeDetail() {
-        return codeDetail;
-    }
-
-    public Object getList() {
-        return list;
-    }
-
-    public String getMsg() {
-        return msg;
-    }
-
-    public String getMsgDetail() {
-        return msgDetail;
-    }
-
-    public String getMoreInfo() {
-        return moreInfo;
     }
 
     public int getCode() {
@@ -119,16 +81,28 @@ public class Result {
         this.code = code;
     }
 
+    public Object getData() {
+        return data;
+    }
+
+    public void setData(Object data) {
+        this.data = data;
+    }
+
+    public String getMsg() {
+        return msg;
+    }
+
+    public String getMsgDetail() {
+        return msgDetail;
+    }
+
     public String getRequestId() {
         return requestId;
     }
 
-    public Pagination getPagination() {
-        return pagination;
-    }
-
-    public void setPagination(Pagination pagination) {
-        this.pagination = pagination;
+    public void setRequestId(String requestId) {
+        this.requestId = requestId;
     }
 
     /**
@@ -170,10 +144,13 @@ public class Result {
      */
     public Result setData(String key, Object value) {
         // 如果data不是JSONObject对象，则将data转化为JSONObject对象
-        if (!(this.list instanceof JSONObject)) {
-            this.list = JSONObject.parseObject(JSON.toJSONString(this.list));
+        if (data == null) {
+            data = new JSONObject();
         }
-        ((JSONObject) this.list).put(key, value);
+        if (!(this.data instanceof JSONObject)) {
+            this.data = JSONObject.parseObject(JSON.toJSONString(this.data));
+        }
+        ((JSONObject) this.data).put(key, value);
         return this;
     }
 }

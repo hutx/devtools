@@ -1,12 +1,15 @@
 package cn.jsfund.devtools.config;
 
+import cn.jsfund.devtools.shiro.JwtFilter;
+import cn.jsfund.devtools.shiro.MyShiroRealm;
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
+import org.apache.shiro.mgt.DefaultSessionStorageEvaluator;
+import org.apache.shiro.mgt.DefaultSubjectDAO;
 import org.apache.shiro.mgt.SecurityManager;
 import org.apache.shiro.session.mgt.SessionManager;
 import org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
-import org.apache.shiro.web.session.mgt.DefaultWebSessionManager;
 import org.crazycake.shiro.RedisCacheManager;
 import org.crazycake.shiro.RedisManager;
 import org.crazycake.shiro.RedisSessionDAO;
@@ -41,11 +44,12 @@ public class ShiroConfig {
         filterChainDefinitionMap.put("/static/**", "anon");
         filterChainDefinitionMap.put("/api/auth/login", "anon");
         //authc:所有url必须通过认证才能访问，anon:所有url都可以匿名访问
-        filterChainDefinitionMap.put("/**", "corsAuthenticationFilter");
+        filterChainDefinitionMap.put("/**", "jwt");
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
         //自定义过滤器
         Map<String, Filter> filterMap = new LinkedHashMap<>();
-        filterMap.put("corsAuthenticationFilter", corsAuthenticationFilter());
+        filterMap.put("jwt",new JwtFilter());
+//        filterMap.put("corsAuthenticationFilter", corsAuthenticationFilter());
         shiroFilterFactoryBean.setFilters(filterMap);
         return shiroFilterFactoryBean;
     }
@@ -81,6 +85,15 @@ public class ShiroConfig {
     public SecurityManager securityManager() {
         DefaultWebSecurityManager securityManager = new DefaultWebSecurityManager();
         securityManager.setRealm(myShiroRealm());
+        /*
+         * 关闭shiro自带的session，详情见文档
+         * http://shiro.apache.org/session-management.html#SessionManagement-StatelessApplications%28Sessionless%29
+         */
+        DefaultSubjectDAO subjectDAO = new DefaultSubjectDAO();
+        DefaultSessionStorageEvaluator defaultSessionStorageEvaluator = new DefaultSessionStorageEvaluator();
+        defaultSessionStorageEvaluator.setSessionStorageEnabled(false);
+        subjectDAO.setSessionStorageEvaluator(defaultSessionStorageEvaluator);
+        securityManager.setSubjectDAO(subjectDAO);
         // 自定义session管理 使用redis
         securityManager.setSessionManager(sessionManager());
         // 自定义缓存实现 使用redis
@@ -91,7 +104,7 @@ public class ShiroConfig {
     //自定义sessionManager
     @Bean
     public SessionManager sessionManager() {
-        DefaultWebSessionManager sessionManager = new DefaultWebSessionManager();
+        MySessionManager sessionManager = new MySessionManager();
         sessionManager.setSessionDAO(redisSessionDAO());
         return sessionManager;
     }
@@ -105,12 +118,10 @@ public class ShiroConfig {
      */
     public RedisManager redisManager() {
         RedisManager redisManager = new RedisManager();
-        redisManager.setHost(redisProperties.getHost());
-        redisManager.setPort(redisProperties.getPort());
+        redisManager.setHost(redisProperties.getHost() + ":" + redisProperties.getPort());
         redisManager.setPassword(redisProperties.getPassword());
         redisManager.setDatabase(redisProperties.getDatabase());
         return redisManager;
-        //return new RedisManager();
     }
 
     /**

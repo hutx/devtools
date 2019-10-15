@@ -1,8 +1,7 @@
 package cn.jsfund.devtools.sys.controller;
 
 import cn.jsfund.devtools.common.bean.Result;
-import cn.jsfund.devtools.sys.entity.SysUser;
-import com.alibaba.fastjson.JSONObject;
+import cn.jsfund.devtools.util.JWTUtil;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.IncorrectCredentialsException;
@@ -11,6 +10,7 @@ import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -18,13 +18,14 @@ import org.springframework.web.bind.annotation.RestController;
 public class AuthController {
 
     @PostMapping("/login")
-    public Result auth(SysUser user) {
+    public Result auth(@RequestParam("username") String username,
+                       @RequestParam("password") String password) {
         Result result = new Result();
         Subject subject = SecurityUtils.getSubject();
-        UsernamePasswordToken token = new UsernamePasswordToken(user.getName(), user.getPassword());
+        UsernamePasswordToken token = new UsernamePasswordToken(username, password);
         try {
             subject.login(token);
-            result.setData("token", subject.getSession().getId());
+            result.setData("token", JWTUtil.createToken(username));
             result.setMsg("登录成功！");
 
         } catch (IncorrectCredentialsException e) {
@@ -39,9 +40,10 @@ public class AuthController {
         return result;
     }
 
+
     @RequestMapping("/unauth")
     public Result unAuth() {
-        Result result = new Result(200, new JSONObject(), "未登录", "未登录");
+        Result result = new Result(200, null, null, "未登录", "未登录");
         return result;
     }
 }

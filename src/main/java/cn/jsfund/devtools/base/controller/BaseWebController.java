@@ -152,11 +152,11 @@ public class BaseWebController<M extends IService<T>, T> implements BaseControll
      * @return
      */
     public Result successReturn(Object data, Pagination pagination) {
-        return successReturn(data, "", pagination);
+        return successReturn(data, pagination, "");
     }
 
     public Result successReturn(Object data) {
-        return successReturn(data, "", null);
+        return successReturn(data, null);
     }
 
     public Pagination getPagination(long current, long pageSize, long total) {
@@ -170,35 +170,15 @@ public class BaseWebController<M extends IService<T>, T> implements BaseControll
      * @param msg  返回的信息
      * @return
      */
-    public Result successReturn(Object data, String msg, Pagination pagination) {
+    public Result successReturn(Object data, Pagination pagination, String msg) {
         // 如果对象为空，则默认初始化为Json对象
         if (null == data) {
             data = new JSONObject();
         }
-        Result Result = new Result(200, data, msg, "", pagination);
+        Result Result = new Result(200, data, pagination, msg, "");
         return Result;
     }
 
-    /**
-     * 返回失败
-     *
-     * @param msg 返回的信息
-     * @return
-     */
-    public Result errorReturn(int code, String msg) {
-        return errorReturn(code, msg, "");
-    }
-
-    /**
-     * 返回失败
-     *
-     * @param msg      返回的信息
-     * @param msgDebug 返回的错误堆栈信息
-     * @return
-     */
-    public Result errorReturn(int code, String msg, Exception msgDebug) {
-        return new Result(code, new JSONObject(), msg, msgDebug);
-    }
 
     /**
      * 返回失败
@@ -208,6 +188,6 @@ public class BaseWebController<M extends IService<T>, T> implements BaseControll
      * @return
      */
     public Result errorReturn(int code, String msg, String msgDebug) {
-        return new Result(code, new JSONObject(), msg, msgDebug);
+        return new Result(code, null, null, msg, msgDebug);
     }
 }

@@ -1,4 +1,4 @@
 package cn.jsfund.devtools.base;
 
-public class BaseEntity {
+public class BaseEntity  {
 }
